@@ -9,15 +9,19 @@
     Background="#FF123B57">
 
 
-    <Grid >
+    <Grid>
         <StackPanel>
             <TextBlock x:Name="TaskTitle" HorizontalAlignment="Left" Margin="40,10,0,0" Style="{StaticResource TitleTextBlockStyle}" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" Text="Set Filters" FontFamily="Segoe WP Light" FontWeight="Normal"/>
+            <RadioButton Content="All" Margin="20,20,20,0" IsChecked="True"/>
+            <RadioButton Content="By Priority" Margin="20,0,20,0" />
             <StackPanel Orientation="Horizontal">
+                
                 <TextBlock x:Name="PriorityTextBox" Margin="20,20,20,0" TextWrapping="Wrap" Text="Priority: " FontSize="22"/>
                 <TextBlock x:Name="PriorityFilter" Margin="20,20,20,0" TextWrapping="Wrap" Text="{Binding ElementName=PriorityFilterSlider,Path=Value}" FontSize="22"/>
                 
             </StackPanel>
             <Slider x:Name="PriorityFilterSlider" Maximum="5" Minimum="1" TickFrequency="1" Background="#FFD0D8DD" Margin="20,0,20,0" Value="1"/>
+            
         </StackPanel>
     </Grid>
     <Page.BottomAppBar>
