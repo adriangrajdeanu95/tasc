@@ -11,40 +11,44 @@
     <Grid>
         <Pivot Title="T.A.S.C.">
             <PivotItem Header="Today">
-                <ListView ItemClick="ListView_ItemClick">
-                    <ListViewItem>
-                        <StackPanel Orientation="Vertical">
-                            <TextBlock FontSize="20">Tema SDA 3</TextBlock>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock FontSize="30" Foreground="#FF56A1D4">16:00</TextBlock>
-                                <TextBlock FontSize="30" Foreground="#FF56A1D4">  -</TextBlock>
-                                <TextBlock FontSize="30" Foreground="#FF56A1D4">19:30</TextBlock>
+                <ScrollViewer>
+                    <ListView ItemClick="ListView_ItemClick">
+                        <ListViewItem>
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock FontSize="20">Tema SDA 3</TextBlock>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">16:00</TextBlock>
+                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">  -</TextBlock>
+                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">19:30</TextBlock>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem>
-                        <StackPanel Orientation="Vertical">
-                            <TextBlock FontSize="20">Referat fizica</TextBlock>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock FontSize="30" Foreground="#FF56A1D4">19:30</TextBlock>
-                                <TextBlock FontSize="30" Foreground="#FF56A1D4">  -</TextBlock>
-                                <TextBlock FontSize="30" Foreground="#FF56A1D4">20:00</TextBlock>
+                        </ListViewItem>
+                        <ListViewItem>
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock FontSize="20">Referat fizica</TextBlock>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">19:30</TextBlock>
+                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">  -</TextBlock>
+                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">20:00</TextBlock>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem>
-                        <StackPanel Orientation="Vertical">
-                            <TextBlock FontSize="20">Proiect engleza</TextBlock>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock FontSize="30" Foreground="#FF56A1D4">20:30</TextBlock>
-                                <TextBlock FontSize="30" Foreground="#FF56A1D4">  -</TextBlock>
-                                <TextBlock FontSize="30" Foreground="#FF56A1D4">22:30</TextBlock>
+                        </ListViewItem>
+                        <ListViewItem>
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock FontSize="20">Proiect engleza</TextBlock>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">20:30</TextBlock>
+                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">  -</TextBlock>
+                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">22:30</TextBlock>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </ListViewItem>
-                </ListView>
+                        </ListViewItem>
+                    </ListView>
+                </ScrollViewer>
             </PivotItem>
+            
             <PivotItem Header="This Week">
+                <ScrollViewer>
                 <StackPanel Orientation="Vertical">
                     <TextBlock FontSize="30" Foreground="#FF56A1D4">Monday</TextBlock>
                     <ListView>
@@ -95,58 +99,61 @@
                         </ListViewItem>
                     </ListView>
                 </StackPanel>
+            </ScrollViewer>
             </PivotItem>
             <PivotItem Header="All Tasks">
-                <ListView ItemClick="ListView_ItemClick">
-                    <ListViewItem HorizontalAlignment="Stretch">
-                        <StackPanel Orientation="Vertical">
-                            <TextBlock FontSize="20">Tema SDA 3</TextBlock>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock FontSize="30" Foreground="#FF56A1D4">16:00</TextBlock>
-                                <TextBlock FontSize="30" Foreground="#FF56A1D4">  -</TextBlock>
-                                <TextBlock FontSize="30" Foreground="#FF56A1D4">19:30</TextBlock>
-                                <TextBlock FontSize="25" Foreground="#FF56A1D4" Margin="20,1,0,0">tue</TextBlock>
-                                <TextBlock FontSize="25" Foreground="#FF56A1D4" Margin="10,1,0,0">3/5/2016</TextBlock>
+                <ScrollViewer>
+                    <ListView ItemClick="ListView_ItemClick">
+                        <ListViewItem HorizontalAlignment="Stretch">
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock FontSize="20">Tema SDA 3</TextBlock>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">16:00</TextBlock>
+                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">  -</TextBlock>
+                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">19:30</TextBlock>
+                                    <TextBlock FontSize="25" Foreground="#FF56A1D4" Margin="20,1,0,0">tue</TextBlock>
+                                    <TextBlock FontSize="25" Foreground="#FF56A1D4" Margin="10,1,0,0">3/5/2016</TextBlock>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem>
-                        <StackPanel Orientation="Vertical">
-                            <TextBlock FontSize="20">Referat fizica</TextBlock>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock FontSize="30" Foreground="#FF56A1D4">19:30</TextBlock>
-                                <TextBlock FontSize="30" Foreground="#FF56A1D4">  -</TextBlock>
-                                <TextBlock FontSize="30" Foreground="#FF56A1D4">20:00</TextBlock>
-                                <TextBlock FontSize="25" Foreground="#FF56A1D4" Margin="20,1,0,0">tue</TextBlock>
-                                <TextBlock FontSize="25" Foreground="#FF56A1D4" Margin="10,1,0,0">3/5/2016</TextBlock>
+                        </ListViewItem>
+                        <ListViewItem>
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock FontSize="20">Referat fizica</TextBlock>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">19:30</TextBlock>
+                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">  -</TextBlock>
+                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">20:00</TextBlock>
+                                    <TextBlock FontSize="25" Foreground="#FF56A1D4" Margin="20,1,0,0">tue</TextBlock>
+                                    <TextBlock FontSize="25" Foreground="#FF56A1D4" Margin="10,1,0,0">3/5/2016</TextBlock>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem>
-                        <StackPanel Orientation="Vertical">
-                            <TextBlock FontSize="20">Proiect engleza</TextBlock>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock FontSize="30" Foreground="#FF56A1D4">20:30</TextBlock>
-                                <TextBlock FontSize="30" Foreground="#FF56A1D4">  -</TextBlock>
-                                <TextBlock FontSize="30" Foreground="#FF56A1D4">22:30</TextBlock>
-                                <TextBlock FontSize="25" Foreground="#FF56A1D4" Margin="20,1,0,0">tue</TextBlock>
-                                <TextBlock FontSize="25" Foreground="#FF56A1D4" Margin="10,1,0,0">3/5/2016</TextBlock>
+                        </ListViewItem>
+                        <ListViewItem>
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock FontSize="20">Proiect engleza</TextBlock>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">20:30</TextBlock>
+                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">  -</TextBlock>
+                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">22:30</TextBlock>
+                                    <TextBlock FontSize="25" Foreground="#FF56A1D4" Margin="20,1,0,0">tue</TextBlock>
+                                    <TextBlock FontSize="25" Foreground="#FF56A1D4" Margin="10,1,0,0">3/5/2016</TextBlock>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </ListViewItem>
-                    <ListViewItem>
-                        <StackPanel Orientation="Vertical">
-                            <TextBlock FontSize="20">Proiect chimie</TextBlock>
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock FontSize="30" Foreground="#FF56A1D4">15:45</TextBlock>
-                                <TextBlock FontSize="30" Foreground="#FF56A1D4">  -</TextBlock>
-                                <TextBlock FontSize="30" Foreground="#FF56A1D4">17:15</TextBlock>
-                                <TextBlock FontSize="25" Foreground="#FF56A1D4" Margin="20,1,0,0">wed</TextBlock>
-                                <TextBlock FontSize="25" Foreground="#FF56A1D4" Margin="10,1,0,0">4/5/2016</TextBlock>
+                        </ListViewItem>
+                        <ListViewItem>
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock FontSize="20">Proiect chimie</TextBlock>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">15:45</TextBlock>
+                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">  -</TextBlock>
+                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">17:15</TextBlock>
+                                    <TextBlock FontSize="25" Foreground="#FF56A1D4" Margin="20,1,0,0">wed</TextBlock>
+                                    <TextBlock FontSize="25" Foreground="#FF56A1D4" Margin="10,1,0,0">4/5/2016</TextBlock>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
-                    </ListViewItem>
-                </ListView>
+                        </ListViewItem>
+                    </ListView>
+                </ScrollViewer>
             </PivotItem>
         </Pivot>
     </Grid>
