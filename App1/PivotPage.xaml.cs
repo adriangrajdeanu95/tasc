@@ -164,5 +164,10 @@ namespace App1
         }
 
         #endregion
+
+        private void FilterAppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(ContentDialog1));
+        }
     }
 }

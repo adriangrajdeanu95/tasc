@@ -7,12 +7,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Title="Add New Task"
-    PrimaryButtonText="Add Task"
-    SecondaryButtonText="cancel"
-    PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
-    SecondaryButtonClick="ContentDialog_SecondaryButtonClick" Background="#FF071F2C" Foreground="White">
+    Background="#FF071F2C" Foreground="White">
 
-    <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+    <StackPanel HorizontalAlignment="Stretch">
         <TextBox x:Name="title" Header="Task Title"/>
         <TextBox x:Name="description" Header="Description" Height="171" Margin="0,0,-0.333,0" d:LayoutOverrides="TopMargin, BottomMargin"/>
         <Slider x:Name="priority" Header="Priority" Height="61" Background="#FFCDD2D5" RenderTransformOrigin="0.5,0.5" Margin="0,0,-0.333,0" Maximum="5" TickFrequency="1">
@@ -25,29 +22,20 @@
         <StackPanel Orientation="Vertical">
             <StackPanel Orientation="Horizontal">
                 <ComboBox x:Name="hours" FontSize="20" PlaceholderText="hours" HorizontalAlignment="Left" Width="82">
-                    <ComboBoxItem Background="#FF071F2C" Foreground="White" Content="0"/>
-                    <ComboBoxItem Background="#FF071F2C" Foreground="White" Content="1"/>
-                    <ComboBoxItem Background="#FF071F2C" Foreground="White" Content="2"/>
-                    <ComboBoxItem Background="#FF071F2C" Foreground="White" Content="3"/>
-                    <ComboBoxItem Background="#FF071F2C" Foreground="White" Content="4"/>
-                    <ComboBoxItem Background="#FF071F2C" Foreground="White" Content="5"/>
-                    <ComboBoxItem Background="#FF071F2C" Foreground="White" Content="6"/>
+                    <ComboBoxItem Background="#FF071F2C" Foreground="White">0</ComboBoxItem>
                 </ComboBox>
-            <ComboBox x:Name="minutes" FontSize="20" PlaceholderText="minutes" HorizontalAlignment="Left" Width="89">
-                    <ComboBoxItem Background="#FF071F2C" Foreground="White" Content="0"/>
-                    <ComboBoxItem Background="#FF071F2C" Foreground="White" Content="5"/>
-                    <ComboBoxItem Background="#FF071F2C" Foreground="White" Content="10"/>
-                    <ComboBoxItem Background="#FF071F2C" Foreground="White" Content="15"/>
-                    <ComboBoxItem Background="#FF071F2C" Foreground="White" Content="20"/>
-                    <ComboBoxItem Background="#FF071F2C" Foreground="White" Content="25"/>
-                    <ComboBoxItem Background="#FF071F2C" Foreground="White" Content="30"/>
-                    <ComboBoxItem Background="#FF071F2C" Foreground="White" Content="35"/>
-                    <ComboBoxItem Background="#FF071F2C" Foreground="White" Content="40"/>
-                    <ComboBoxItem Background="#FF071F2C" Foreground="White" Content="45"/>
-                    <ComboBoxItem Background="#FF071F2C" Foreground="White" Content="50"/>
+                <ComboBox x:Name="minutes" FontSize="20" PlaceholderText="mins" HorizontalAlignment="Left" Width="85">
+                    <ComboBoxItem Background="#FF071F2C" Foreground="White">0</ComboBoxItem>
                 </ComboBox>
+            </StackPanel>
         </StackPanel>
-    </StackPanel>
+
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Button></Button>
+                <Button></Button>
+            </StackPanel>
+        </StackPanel>
 
     </StackPanel>
 </ContentDialog>

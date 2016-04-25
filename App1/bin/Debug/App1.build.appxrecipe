@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>DESKTOP-JBDAN7M</Machine>
-    <WindowsUser>Adrian.Grajdeanu</WindowsUser>
+    <Machine>DESKTOP-DUVVMJO</Machine>
+    <WindowsUser>ionut</WindowsUser>
     <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
     <TargetOsVersion>6.3</TargetOsVersion>
     <TargetOsDescription>Windows Phone 8.1</TargetOsDescription>
@@ -56,6 +56,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\tasc\App1\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\tasc\App1\bin\Debug\ContentDialog1.xbf">
+      <PackagePath>ContentDialog1.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\tasc\App1\bin\Debug\ItemPage.xbf">
       <PackagePath>ItemPage.xbf</PackagePath>

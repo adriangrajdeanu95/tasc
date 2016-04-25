@@ -126,11 +126,6 @@
     <Content Include="Assets\StoreLogo.scale-240.png" />
     <Content Include="Assets\WideLogo.scale-240.png" />
     <Content Include="Common\ReadMe.txt" />
-    <Content Include="SampleData\TaskDescription\TaskDescription_Files\image01.png" />
-    <Content Include="SampleData\TaskDescription\TaskDescription_Files\image02.png" />
-    <Content Include="SampleData\TaskDescription\TaskDescription_Files\image03.png" />
-    <Content Include="SampleData\TaskDescription\TaskDescription_Files\image04.png" />
-    <Content Include="SampleData\TaskDescription\TaskDescription_Files\image05.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
