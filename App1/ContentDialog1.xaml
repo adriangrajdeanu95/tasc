@@ -1,0 +1,21 @@
+﻿<ContentDialog
+    x:Class="App1.ContentDialog1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="DIALOG TITLE"
+    PrimaryButtonText="Add Task"  
+    SecondaryButtonText="cancel"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
+    SecondaryButtonClick="ContentDialog_SecondaryButtonClick" Background="#FF071F2C" Foreground="#FF071F2C">
+
+    <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <TextBox x:Name="title" Header="Task Title"/>
+        <PasswordBox x:Name="description" Header="Description" Height="171" Margin="0,0,-0.333,0" d:LayoutOverrides="TopMargin, BottomMargin"/>
+        
+       
+    </StackPanel>
+</ContentDialog>
