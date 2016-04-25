@@ -6,10 +6,10 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="#FF123B57">
 
     <Grid>
-        <Pivot Title="T.A.S.C." Background="#FF123B57">
+        <Pivot Title="T.A.S.C.">
             <PivotItem Header="Today">
                 <ListView ItemClick="ListView_ItemClick">
                     <ListViewItem>
@@ -45,7 +45,56 @@
                 </ListView>
             </PivotItem>
             <PivotItem Header="This Week">
-                <StackPanel></StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <TextBlock FontSize="30" Foreground="#FF56A1D4">Monday</TextBlock>
+                    <ListView>
+                        <ListViewItem>
+                            <TextBlock FontSize="20">Tema 3 SDA</TextBlock>
+                        </ListViewItem>
+                        <ListViewItem>
+                            <TextBlock FontSize="20">Proiect engleza</TextBlock>
+                        </ListViewItem>
+                        <ListViewItem>
+                            <TextBlock FontSize="20">Proiect engleza</TextBlock>
+                        </ListViewItem>
+                    </ListView>
+                    <TextBlock FontSize="30" Foreground="#FF56A1D4">Tuesday</TextBlock>
+                    <ListView>
+                        <ListViewItem>
+                            <TextBlock FontSize="20">Proiect Chimie</TextBlock>
+                        </ListViewItem>
+                    </ListView>
+                    <TextBlock FontSize="30" Foreground="#FF56A1D4">Wednesday</TextBlock>
+                    <ListView>
+                        <ListViewItem>
+                            <TextBlock FontSize="20">nothing here</TextBlock>
+                        </ListViewItem>
+                    </ListView>
+                    <TextBlock FontSize="30" Foreground="#FF56A1D4">Thursday</TextBlock>
+                    <ListView>
+                        <ListViewItem>
+                            <TextBlock FontSize="20">nothing here</TextBlock>
+                        </ListViewItem>
+                    </ListView>
+                    <TextBlock FontSize="30" Foreground="#FF56A1D4">Friday</TextBlock>
+                    <ListView>
+                        <ListViewItem>
+                            <TextBlock FontSize="20">nothing here</TextBlock>
+                        </ListViewItem>
+                    </ListView>
+                    <TextBlock FontSize="30" Foreground="#FF56A1D4">Saturday</TextBlock>
+                    <ListView>
+                        <ListViewItem>
+                            <TextBlock FontSize="20">nothing here</TextBlock>
+                        </ListViewItem>
+                    </ListView>
+                    <TextBlock FontSize="30" Foreground="#FF56A1D4">Sunday</TextBlock>
+                    <ListView>
+                        <ListViewItem>
+                            <TextBlock FontSize="20">nothing here</TextBlock>
+                        </ListViewItem>
+                    </ListView>
+                </StackPanel>
             </PivotItem>
             <PivotItem Header="All Tasks">
                 <ListView ItemClick="ListView_ItemClick">
