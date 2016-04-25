@@ -163,7 +163,7 @@
             <AppBarButton x:Uid="AddAppBarButton" x:Name="AddAppBarButton" Label="Add Task" Icon="Add" Click="AddAppBarButton_Click" />
             <AppBarButton x:Uid="FilterAppBarButton" x:Name="FilterAppBarButton" Label="Filter" Icon="Filter" Click="FilterAppBarButton_Click" />
             <CommandBar.SecondaryCommands>
-                <AppBarButton x:Uid="SecondaryButton1" x:Name="SecondaryButton1" Label="Profile Preferences" />
+                <AppBarButton x:Uid="Preferences" x:Name="Preferences" Label="Preferences" Click="Preferences_Click"/>
             </CommandBar.SecondaryCommands>
         </CommandBar>
     </Page.BottomAppBar>

@@ -59,5 +59,10 @@ namespace App2
         {
 
         }
+
+        private void Preferences_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
