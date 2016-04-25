@@ -44,5 +44,20 @@ namespace App2
             // If you are using the NavigationHelper provided by some templates,
             // this event is handled for you.
         }
+
+        private void FilterAppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AddAppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ListView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
     }
 }

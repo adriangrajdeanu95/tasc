@@ -1,9 +1,4 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-<<<<<<< HEAD
-    <LocalAssembly PathName="d:\projects\tasc\app1\obj\debug\intermediatexaml\app1.exe" HashGuid="c08977c7-7b51-9dad-0f7b-2b34bd06daab" />
-=======
-    <LocalAssembly PathName="d:\projects\tasc\app1\obj\debug\intermediatexaml\app1.exe" HashGuid="32cd2a9f-702d-c22d-da9e-34f0c0b8477d" />
->>>>>>> origin/master
   </ReferenceAssemblyList>
 </XamlCompilerSaveState>
