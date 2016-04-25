@@ -167,7 +167,14 @@ namespace App1
 
         private void FilterAppBarButton_Click(object sender, RoutedEventArgs e)
         {
+<<<<<<< HEAD
             this.Frame.Navigate(typeof(ContentDialog1));
+=======
+            if (!Frame.Navigate(typeof(ContentDialog)))
+            {
+                throw new Exception(this.resourceLoader.GetString("NavigationFailedExceptionMessage"));
+            }
+>>>>>>> origin/master
         }
     }
 }

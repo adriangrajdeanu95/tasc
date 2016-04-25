@@ -13,6 +13,11 @@
     <RootType FullName="Windows.UI.Xaml.Application" />
     <RootType FullName="Windows.UI.Xaml.Controls.ContentDialog">
       <RootProperty Name="Title" />
+<<<<<<< HEAD
+=======
+      <RootProperty Name="PrimaryButtonText" />
+      <RootProperty Name="SecondaryButtonText" />
+>>>>>>> origin/master
       <RootProperty Name="Background" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="Content" />
@@ -20,6 +25,10 @@
       <RootEvent Name="SecondaryButtonClick" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
+<<<<<<< HEAD
+=======
+      <RootProperty Name="VerticalAlignment" />
+>>>>>>> origin/master
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Children" />
       <RootProperty Name="Orientation" />
@@ -56,7 +65,10 @@
       <RootProperty Name="CharacterSpacing" />
       <RootProperty Name="FontWeight" />
     </RootType>
+<<<<<<< HEAD
     <RootType FullName="Windows.UI.Xaml.Controls.Button" />
+=======
+>>>>>>> origin/master
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
       <RootProperty Name="FontSize" />
       <RootProperty Name="PlaceholderText" />
