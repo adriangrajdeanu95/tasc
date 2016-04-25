@@ -164,5 +164,13 @@ namespace App1
         }
 
         #endregion
+
+        private void FilterAppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (!Frame.Navigate(typeof(ContentDialog)))
+            {
+                throw new Exception(this.resourceLoader.GetString("NavigationFailedExceptionMessage"));
+            }
+        }
     }
 }

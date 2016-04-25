@@ -57,6 +57,9 @@
     <AppxPackagedFile Include="D:\Projects\tasc\App1\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\tasc\App1\bin\Debug\ContentDialog1.xbf">
+      <PackagePath>ContentDialog1.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\tasc\App1\bin\Debug\ItemPage.xbf">
       <PackagePath>ItemPage.xbf</PackagePath>
     </AppxPackagedFile>
