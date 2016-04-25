@@ -112,5 +112,25 @@ namespace App1
         }
 
         #endregion
+
+        private void DeleteTaskButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void PostponeTaskButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void EditTaskButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DoneTaskButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

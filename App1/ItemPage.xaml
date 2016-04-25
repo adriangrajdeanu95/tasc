@@ -70,7 +70,7 @@
     </Grid>
     <Page.BottomAppBar>
         <CommandBar Background="#FF071F2C">
-            <AppBarButton x:Uid="PostponeTaskButton" x:Name="PostponeTaskButton" Label="Postpone" Icon="Clock" Click="PostponeTaskButton_Click" />
+            <AppBarButton x:Uid="DoneTaskButton" x:Name="DoneTaskButton" Label="Done" Icon="Accept" Click="DoneTaskButton_Click" />
             <AppBarButton x:Uid="DeleteTaskButton" x:Name="DeleteTaskButton" Label="Delete" Icon="Delete" Click="DeleteTaskButton_Click" />
             <AppBarButton x:Uid="EditTaskButton" x:Name="EditTaskButton" Label="Edit" Icon="Edit" Click="EditTaskButton_Click" />
         </CommandBar>
