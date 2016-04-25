@@ -20,9 +20,9 @@ namespace App2
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class TaskPage : Page
+    public sealed partial class FilterPage : Page
     {
-        public TaskPage()
+        public FilterPage()
         {
             this.InitializeComponent();
         }
@@ -36,17 +36,12 @@ namespace App2
         {
         }
 
-        private void EditAppBarButton_Click(object sender, RoutedEventArgs e)
+        private void CancelFilterButton_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void DeleteAppBarButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void DoneAppBarButton_Click(object sender, RoutedEventArgs e)
+        private void ValidateFilterButton_Click(object sender, RoutedEventArgs e)
         {
 
         }
