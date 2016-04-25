@@ -35,3 +35,7 @@ D:\Projects\tasc\App1\obj\Debug\qualifiers.txt
 D:\Projects\tasc\App1\obj\Debug\qualifiers.txt.intermediate
 D:\Projects\tasc\App1\obj\Debug\MultipleQualifiersPerDimensionFound.txt
 D:\Projects\tasc\App1\obj\Debug\ProjectArchitectures.txt
+D:\Projects\tasc\App1\obj\Debug\ContentDialog1.g.i.cs
+D:\Projects\tasc\App1\obj\Debug\ContentDialog1.g.cs
+D:\Projects\tasc\App1\obj\Debug\ContentDialog1.xaml
+D:\Projects\tasc\App1\obj\Debug\ContentDialog1.xbf
