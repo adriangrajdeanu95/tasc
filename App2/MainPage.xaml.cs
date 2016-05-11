@@ -28,7 +28,7 @@ namespace App2
         public class DataSet
         {
             public string TaskName { get; set; }
-            public DateTime TaskStart, TaskEnd;
+            public string TaskTime { get; set; }
         }
 
         public MainPage()
@@ -36,6 +36,13 @@ namespace App2
             this.InitializeComponent();
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
+
+            var item = new DataSet();
+            DateTime date1 = new DateTime(2008, 6, 1, 7, 47, 0);
+            DateTime date2 = new DateTime(2008, 6, 1, 9, 37, 0);
+            item.TaskName = "Hello new task";
+            item.TaskTime = date1.TimeOfDay + "- " + date2.TimeOfDay;
+            TodayList.Items.Add(item);
         }
 
         /// <summary>
@@ -52,12 +59,6 @@ namespace App2
             // Windows.Phone.UI.Input.HardwareButtons.BackPressed event.
             // If you are using the NavigationHelper provided by some templates,
             // this event is handled for you.
-
-            var item = new DataSet();
-            item.TaskName = "Hello";
-            item.TaskStart = new DateTime(2008, 6, 1, 7, 47, 0);
-            item.TaskEnd = new DateTime(2008, 6, 1, 9, 37, 0);
-            TodayList.Items.Add(item);
         }
 
         private void FilterAppBarButton_Click(object sender, RoutedEventArgs e)
