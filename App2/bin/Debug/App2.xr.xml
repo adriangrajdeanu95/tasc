@@ -2,6 +2,9 @@
 <Roots xmlns="clr-namespace:Microsoft.Xaml.Tools.XamlCompiler.RootLog;assembly=Microsoft.Windows.UI.Xaml.81.Build.Tasks">
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="Value" />
+    <RootPropertyPathName Name="TaskEnd" />
+    <RootPropertyPathName Name="TaskStart" />
+    <RootPropertyPathName Name="TaskName" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
