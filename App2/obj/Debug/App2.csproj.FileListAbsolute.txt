@@ -32,11 +32,17 @@ D:\Projects\tasc\App2\obj\Debug\MultipleQualifiersPerDimensionFound.txt
 D:\Projects\tasc\App2\obj\Debug\ProjectArchitectures.txt
 D:\Projects\tasc\App2\obj\Debug\AddNewTask.g.i.cs
 D:\Projects\tasc\App2\obj\Debug\AddNewTask.g.cs
+<<<<<<< HEAD
+=======
+D:\Projects\tasc\App2\obj\Debug\Preferences.g.i.cs
+D:\Projects\tasc\App2\obj\Debug\Preferences.g.cs
+>>>>>>> origin/master
 D:\Projects\tasc\App2\obj\Debug\FilterPage.g.i.cs
 D:\Projects\tasc\App2\obj\Debug\FilterPage.g.cs
 D:\Projects\tasc\App2\obj\Debug\TaskPage.g.i.cs
 D:\Projects\tasc\App2\obj\Debug\TaskPage.g.cs
 D:\Projects\tasc\App2\obj\Debug\AddNewTask.xaml
+<<<<<<< HEAD
 D:\Projects\tasc\App2\obj\Debug\AddNewTask.xbf
 D:\Projects\tasc\App2\obj\Debug\FilterPage.xaml
 D:\Projects\tasc\App2\obj\Debug\TaskPage.xaml
@@ -45,3 +51,12 @@ D:\Projects\tasc\App2\obj\Debug\TaskPage.xbf
 D:\Projects\tasc\App2\bin\Debug\AddNewTask.xbf
 D:\Projects\tasc\App2\bin\Debug\FilterPage.xbf
 D:\Projects\tasc\App2\bin\Debug\TaskPage.xbf
+=======
+D:\Projects\tasc\App2\obj\Debug\Preferences.xaml
+D:\Projects\tasc\App2\obj\Debug\FilterPage.xaml
+D:\Projects\tasc\App2\obj\Debug\TaskPage.xaml
+D:\Projects\tasc\App2\obj\Debug\AddNewTask.xbf
+D:\Projects\tasc\App2\obj\Debug\Preferences.xbf
+D:\Projects\tasc\App2\obj\Debug\FilterPage.xbf
+D:\Projects\tasc\App2\obj\Debug\TaskPage.xbf
+>>>>>>> origin/master
