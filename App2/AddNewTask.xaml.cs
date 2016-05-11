@@ -47,7 +47,7 @@ namespace App2
         {
             if (Frame.CanGoBack)
             {
-                e.Handled = true;
+                //e.Handled = true;
                 Frame.GoBack();
             }
         }

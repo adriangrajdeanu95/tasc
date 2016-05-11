@@ -14,7 +14,7 @@
                 <ScrollViewer>
                     <ListView x:Name="TodayList" ItemClick="ListView_ItemClick" IsItemClickEnabled="True">
                         <ListView.Resources>
-                            <DataTemplate>
+                            <DataTemplate x:Key="TemplateToday">
                         <ListViewItem>
                             <StackPanel Orientation="Vertical">
                                 <TextBlock x:Name="TaskName" FontSize="20" Text="{Binding TaskName}"/>
