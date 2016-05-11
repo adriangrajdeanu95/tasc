@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -23,6 +24,13 @@ namespace App2
     /// </summary>
     public sealed partial class MainPage : Page
     {
+
+        public class DataSet
+        {
+            public string TaskName { get; set; }
+            public DateTime TaskStart, TaskEnd;
+        }
+
         public MainPage()
         {
             this.InitializeComponent();
@@ -44,8 +52,13 @@ namespace App2
             // Windows.Phone.UI.Input.HardwareButtons.BackPressed event.
             // If you are using the NavigationHelper provided by some templates,
             // this event is handled for you.
+
+            var item = new DataSet();
+            item.TaskName = "Hello";
+            item.TaskStart = new DateTime(2008, 6, 1, 7, 47, 0);
+            item.TaskEnd = new DateTime(2008, 6, 1, 9, 37, 0);
+            TodayList.Items.Add(item);
         }
-        
 
         private void FilterAppBarButton_Click(object sender, RoutedEventArgs e)
         {

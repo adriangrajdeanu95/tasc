@@ -8,41 +8,24 @@
     mc:Ignorable="d"
     Background="#FF123B57">
 
-    <Grid>
+    <Grid
+        
+        >
         <Pivot Title="T.A.S.C.">
             <PivotItem Header="Today">
                 <ScrollViewer>
-                    <ListView ItemClick="ListView_ItemClick" IsItemClickEnabled="True">
+                    <ListView x:Name="TodayList" ItemClick="ListView_ItemClick" IsItemClickEnabled="True">
                         <ListViewItem>
                             <StackPanel Orientation="Vertical">
-                                <TextBlock FontSize="20">Tema SDA 3</TextBlock>
+                                <TextBlock x:Name="TaskName" FontSize="20" Text="{Binding TaskName}"/>
                                 <StackPanel Orientation="Horizontal">
-                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">16:00</TextBlock>
-                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">  -</TextBlock>
-                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">19:30</TextBlock>
+                                    <TextBlock FontSize="30" Foreground="#FF56A1D4" Text="{Binding TaskStart}"/>
+                                    <TextBlock FontSize="30" Foreground="#FF56A1D4" Text="- "/>
+                                    <TextBlock FontSize="30" Foreground="#FF56A1D4" Text="{Binding TaskEnd}"/>
                                 </StackPanel>
                             </StackPanel>
                         </ListViewItem>
-                        <ListViewItem>
-                            <StackPanel Orientation="Vertical">
-                                <TextBlock FontSize="20">Referat fizica</TextBlock>
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">19:30</TextBlock>
-                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">  -</TextBlock>
-                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">20:00</TextBlock>
-                                </StackPanel>
-                            </StackPanel>
-                        </ListViewItem>
-                        <ListViewItem>
-                            <StackPanel Orientation="Vertical">
-                                <TextBlock FontSize="20">Proiect engleza</TextBlock>
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">20:30</TextBlock>
-                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">  -</TextBlock>
-                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">22:30</TextBlock>
-                                </StackPanel>
-                            </StackPanel>
-                        </ListViewItem>
+                        
                     </ListView>
                 </ScrollViewer>
             </PivotItem>
