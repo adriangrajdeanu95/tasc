@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.Phone.UI.Input;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
 
@@ -34,6 +35,7 @@ namespace App2
         /// This parameter is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            Windows.Phone.UI.Input.HardwareButtons.BackPressed += HardwareButtons_BackPressed;
         }
 
         private void AddNewTaskButton_Click(object sender, RoutedEventArgs e)
@@ -46,7 +48,7 @@ namespace App2
             this.Frame.GoBack();
         }
 
-        private void HardwareButtons_BackPressed(object sender, RoutedEventArgs e)
+        private void HardwareButtons_BackPressed(object sender, BackPressedEventArgs e)
         {
             this.Frame.GoBack();
         }
