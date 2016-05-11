@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace App2
 {
-    class Globals
+    public static class Globals
     {
+        public static TaskObject[] TaskList;
     }
 }
