@@ -37,6 +37,7 @@ namespace App2
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
 
+
             var item = new DataSet();
             DateTime date1 = new DateTime(2008, 6, 1, 7, 47, 0);
             DateTime date2 = new DateTime(2008, 6, 1, 9, 37, 0);

@@ -8,24 +8,23 @@
     mc:Ignorable="d"
     Background="#FF123B57">
 
-    <Grid
-        
-        >
+    <Grid>
         <Pivot Title="T.A.S.C.">
-            <PivotItem Header="Today">
+            <PivotItem Header="Today" DataContext="TodayContext">
                 <ScrollViewer>
                     <ListView x:Name="TodayList" ItemClick="ListView_ItemClick" IsItemClickEnabled="True">
+                        <ListView.Resources>
+                            <DataTemplate>
                         <ListViewItem>
                             <StackPanel Orientation="Vertical">
                                 <TextBlock x:Name="TaskName" FontSize="20" Text="{Binding TaskName}"/>
                                 <StackPanel Orientation="Horizontal">
-                                    <TextBlock FontSize="30" Foreground="#FF56A1D4" Text="{Binding TaskStart}"/>
-                                    <TextBlock FontSize="30" Foreground="#FF56A1D4" Text="- "/>
-                                    <TextBlock FontSize="30" Foreground="#FF56A1D4" Text="{Binding TaskEnd}"/>
+                                    <TextBlock FontSize="30" Foreground="#FF56A1D4" Text="{Binding TaskTime}"/>
                                 </StackPanel>
                             </StackPanel>
                         </ListViewItem>
-                        
+                            </DataTemplate>
+                        </ListView.Resources>
                     </ListView>
                 </ScrollViewer>
             </PivotItem>
