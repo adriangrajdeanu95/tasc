@@ -35,12 +35,16 @@ namespace App2
         /// This parameter is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            Windows.Phone.UI.Input.HardwareButtons.BackPressed += HardwareButtons_BackPressed;
+            HardwareButtons.BackPressed += HardwareButtons_BackPressed;
         }
 
         private void HardwareButtons_BackPressed(object sender, BackPressedEventArgs e)
         {
-            this.Frame.GoBack();
+            if (Frame.CanGoBack)
+            {
+                e.Handled = true;
+                Frame.GoBack();
+            }
         }
     }
 }
