@@ -12,7 +12,7 @@
         <Pivot Title="T.A.S.C.">
             <PivotItem Header="Today">
                 <ScrollViewer>
-                    <ListView ItemClick="ListView_ItemClick">
+                    <ListView ItemClick="ListView_ItemClick" IsItemClickEnabled="True">
                         <ListViewItem>
                             <StackPanel Orientation="Vertical">
                                 <TextBlock FontSize="20">Tema SDA 3</TextBlock>

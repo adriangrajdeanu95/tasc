@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=391641
 
 namespace App2
@@ -44,6 +45,7 @@ namespace App2
             // If you are using the NavigationHelper provided by some templates,
             // this event is handled for you.
         }
+        
 
         private void FilterAppBarButton_Click(object sender, RoutedEventArgs e)
         {
@@ -59,7 +61,7 @@ namespace App2
 
         private void ListView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            this.Frame.Navigate(typeof(TaskPage));
+            Frame.Navigate(typeof(TaskPage));
         }
 
         private void Preferences_Click(object sender, RoutedEventArgs e)
