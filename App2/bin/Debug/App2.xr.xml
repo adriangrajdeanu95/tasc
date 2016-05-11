@@ -72,6 +72,8 @@
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="App2.AddNewTask" />
+    <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.ThemeResourceExtension" />
+    <RootType FullName="App2.Preferences" />
     <RootType FullName="Windows.UI.Xaml.Controls.RadioButton">
       <RootProperty Name="Content" />
       <RootProperty Name="Margin" />
