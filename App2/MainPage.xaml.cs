@@ -47,22 +47,22 @@ namespace App2
 
         private void FilterAppBarButton_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Frame.Navigate(typeof(FilterPage));
         }
 
         private void AddAppBarButton_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Frame.Navigate(typeof(AddNewTask));
         }
 
         private void ListView_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            this.Frame.Navigate(typeof(TaskPage));
         }
 
         private void Preferences_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Frame.Navigate(typeof(Preferences));
         }
     }
 }
