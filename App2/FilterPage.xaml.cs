@@ -45,5 +45,10 @@ namespace App2
         {
 
         }
+
+        private void HardwareButtons_BackPressed(object sender, RoutedEventArgs e)
+        {
+            this.Frame.GoBack();
+        }
     }
 }

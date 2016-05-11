@@ -35,5 +35,10 @@ namespace App2
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
         }
+
+        private void HardwareButtons_BackPressed(object sender, RoutedEventArgs e)
+        {
+            this.Frame.GoBack();
+        }
     }
 }

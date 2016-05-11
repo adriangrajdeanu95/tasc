@@ -43,7 +43,13 @@ namespace App2
 
         private void canceltask_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Frame.GoBack();
         }
+
+        private void HardwareButtons_BackPressed(object sender, RoutedEventArgs e)
+        {
+            this.Frame.GoBack();
+        }
+
     }
 }
