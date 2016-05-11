@@ -36,7 +36,7 @@ namespace App2
         {
         }
 
-        private void AddNewTask_Click(object sender, RoutedEventArgs e)
+        private void AddNewTaskButton_Click(object sender, RoutedEventArgs e)
         {
 
         }

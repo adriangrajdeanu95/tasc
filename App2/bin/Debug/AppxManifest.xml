@@ -38,7 +38,7 @@
     <build:Item Name="VisualStudioEdition" Value="Blend for Microsoft Visual Studio Enterprise 2015" />
     <build:Item Name="OperatingSystem" Version="10.0.10586.0 (th2_release.151029-1700)" />
     <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="14.0.25123.0" />
-    <build:Item Name="ProjectGUID" Value="{de255205-4994-441a-abca-02c02a044ebb}" />
+    <build:Item Name="ProjectGUID" Value="{DE255205-4994-441A-ABCA-02C02A044EBB}" />
     <build:Item Name="Microsoft.Windows.UI.Xaml.81.Build.Tasks.dll" Version="14.0.22705.1" />
     <build:Item Name="MakePri.exe" Version="6.3.9600.17336 (winblue.150226-1500)" />
   </build:Metadata>

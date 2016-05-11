@@ -51,6 +51,15 @@
     <AppxPackagedFile Include="D:\Projects\tasc\App2\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\tasc\App2\bin\Debug\AddNewTask.xbf">
+      <PackagePath>AddNewTask.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\tasc\App2\bin\Debug\FilterPage.xbf">
+      <PackagePath>FilterPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\tasc\App2\bin\Debug\TaskPage.xbf">
+      <PackagePath>TaskPage.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\tasc\App2\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>

@@ -48,8 +48,9 @@
 
     <Page.BottomAppBar>
         <CommandBar Background="#FF071F2C">
-            <AppBarButton x:Uid="AddNewTaskButton" x:Name="AddNewTaskButton" Label="Add Task" Icon="Add" Click="AddNewTaskButton_Click" />
-            <AppBarButton x:Uid="CancelTask" x:Name="canceltask" Label="Cancel" Icon="Cancel" Click="canceltask_Click" />
+            <AppBarButton x:ConnectionId='1' x:Uid="AddNewTaskButton" x:Name="AddNewTaskButton" Label="Add Task" Icon="Add"                                />
+            <AppBarButton x:ConnectionId='2' x:Uid="CancelTask" x:Name="canceltask" Label="Cancel" Icon="Cancel"                          />
         </CommandBar>
     </Page.BottomAppBar>
 </Page>
+

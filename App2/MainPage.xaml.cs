@@ -52,7 +52,7 @@ namespace App2
 
         private void AddAppBarButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(AddNewTask));
         }
 
         private void ListView_ItemClick(object sender, ItemClickEventArgs e)
