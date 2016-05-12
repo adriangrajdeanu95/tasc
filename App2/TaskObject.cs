@@ -10,7 +10,8 @@ namespace App2
 {
     public class TaskObject
     {
-        public string TaskName, Description;
+        public string TaskName { get; set; }
+        public string Description { get; set; }
         public DateTime Deadline, AdditionDate;
         public DateTime StartDate, EndDate;
         public double UserPriority, EstimatedTime, Sessions;
@@ -24,6 +25,7 @@ namespace App2
         public TaskObject()
         {
             TaskName = "Unknown";
+            
         }
 
         public void CalculateTruePriority(double ExtraParam)
