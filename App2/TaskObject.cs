@@ -10,13 +10,13 @@ namespace App2
 {
     public class TaskObject
     {
-        string TaskName, Description;
-        DateTime Deadline, AdditionDate;
-        DateTime StartDate, EndDate;
-        double UserPriority, EstimatedTime, Sessions;
-        double TruePriority;
-        int Type;
-        int[] CloneIndexes;
+        public string TaskName, Description;
+        public DateTime Deadline, AdditionDate;
+        public DateTime StartDate, EndDate;
+        public double UserPriority, EstimatedTime, Sessions;
+        public double TruePriority;
+        public int Type;
+        public int[] CloneIndexes;
         //int Category;
 
 
