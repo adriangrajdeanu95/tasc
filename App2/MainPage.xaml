@@ -10,9 +10,10 @@
 
     <Grid>
         <Pivot Title="T.A.S.C.">
-            <PivotItem Header="Today" DataContext="TodayContext">
+            <PivotItem Header="Today">
                 <ScrollViewer>
-                    <ListView x:Name="TodayList" ItemClick="ListView_ItemClick" IsItemClickEnabled="True">
+                    <ListView x:Name="TodayList" ItemClick="ListView_ItemClick" IsItemClickEnabled="True"
+                              ItemsSource="{Binding}">
                         <ListView.Resources>
                             <DataTemplate x:Key="TemplateToday">
                         <ListViewItem>
