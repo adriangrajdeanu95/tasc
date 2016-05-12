@@ -25,8 +25,6 @@ namespace App2
     public sealed partial class MainPage : Page
     {
         
-        public static TaskObject CurrentTask { get; set; }
-
         List<TaskObject> MainList = new List<TaskObject>();
         
         public MainPage()
@@ -81,8 +79,9 @@ namespace App2
             // this event is handled for you.
 
             var par = e.Parameter as string;
-            if (par == "true")
+            if (par=="true")
                 MainList.Add(Globals.TaskList[Globals.TaskList.Length-1]);
+            TodayList.ItemsSource = MainList;
 
         }
 
@@ -99,7 +98,8 @@ namespace App2
 
         private void ListView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            CurrentTask = (TaskObject)this.TodayList.SelectedItem;
+            Globals.CurrentTask = new TaskObject();
+            Globals.CurrentTask = (TaskObject)this.TodayList.SelectedItem;
             Frame.Navigate(typeof(TaskPage));
         }
 

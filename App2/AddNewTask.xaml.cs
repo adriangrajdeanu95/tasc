@@ -46,18 +46,18 @@ namespace App2
             VAR.ChangeName(TextBoxTitle.Text);
             VAR.ChangeDescription(TextBoxDescription.Text);
             VAR.UserPriority = newpriorityslider.Value;
-            VAR.Deadline = Convert.ToDateTime(Deadline.Date);
+            //VAR.Deadline = Convert.ToDateTime(Deadline.Date);
             double.TryParse(TextBoxHours.Text, out aux1);
             double.TryParse(TextBoxMinutes.Text, out aux2);
             VAR.EstimatedTime = aux1+aux2/60;
             VAR.AdditionDate = DateTime.Now;
-
+            VAR.Deadline = new DateTime(2016, 6, 1, 0, 0, 0);
             //TO CALCULATE THE EXTRA PARAM - HELDUP HOURS
 
             VAR.CalculateTruePriority(0);
 
             Array.Resize(ref Globals.TaskList, Globals.TaskList.Length + 1);
-            Globals.TaskList[Globals.TaskList.Length + 1] = VAR;
+            Globals.TaskList[Globals.TaskList.Length-1] = VAR;
 
             CalculatorClass.ScheduleCalculate();
 
