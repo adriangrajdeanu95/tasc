@@ -25,31 +25,41 @@ namespace App2
     public sealed partial class MainPage : Page
     {
 
-        public class DataSet
-        {
-            public DataSet() { }
-            public string TaskName { get; set; }
-            public string TaskTime { get; set; }
-        }
-
-        public static ObservableCollection<DataSet> ListData = new ObservableCollection<DataSet>();
-
-
+        
         public MainPage()
         {
             this.InitializeComponent();
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
 
-            DateTime date1 = new DateTime(2008, 6, 1, 7, 47, 0);
-            DateTime date2 = new DateTime(2008, 6, 1, 9, 37, 0);
 
-            var item = new DataSet();
-            item.TaskName = "Hello new task";
-            item.TaskTime = date1.TimeOfDay + "- " + date2.TimeOfDay;
-            ListData.Add(item);
-            //TodayList.Items.Add("STUFF");
-            TodayList.DataContext = ListData;
+            // adding functionality
+            //
+            //
+            //
+            //
+            //
+            //
+            //
+            Globals.TaskList = new TaskObject[1];
+            Globals.TaskList[0] = new TaskObject();
+            Globals.TaskList[0].TaskName = "random task name";
+            Globals.TaskList[0].Description = "much random description";
+            Globals.TaskList[0].StartDate = new DateTime(2016, 5, 12, 18, 0, 0);
+            Globals.TaskList[0].EndDate = new DateTime(2016, 5, 12, 19, 0, 0);
+
+            List<TaskObject> MainList = new List<TaskObject>();
+            MainList.Add(Globals.TaskList[0]);
+            MainList.Add(Globals.TaskList[0]);
+            TodayList.ItemsSource = MainList;
+
+
+            //
+            //
+            //
+            //
+            //
+                        
         }
 
         /// <summary>

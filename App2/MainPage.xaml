@@ -8,81 +8,88 @@
     mc:Ignorable="d"
     Background="#FF123B57">
 
-    <Grid>
+    <Grid
+        
+        >
         <Pivot Title="T.A.S.C.">
             <PivotItem Header="Today">
                 <ScrollViewer>
-                    <ListView x:Name="TodayList" ItemClick="ListView_ItemClick" IsItemClickEnabled="True"
-                              ItemsSource="{Binding}">
-                        <ListView.Resources>
-                            <DataTemplate x:Key="TemplateToday">
-                        <ListViewItem>
-                            <StackPanel Orientation="Vertical">
-                                <TextBlock x:Name="TaskName" FontSize="20" Text="{Binding TaskName}"/>
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock FontSize="30" Foreground="#FF56A1D4" Text="{Binding TaskTime}"/>
+                    <ListView x:Name="TodayList" 
+                              ItemsSource="{Binding MainList}" 
+                              ItemClick="ListView_ItemClick" 
+                              IsItemClickEnabled="True"
+                              ContinuumNavigationTransitionInfo.ExitElementContainer="True">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Vertical">
+                                    <TextBlock x:Name="TaskName" FontSize="20" Text="{Binding TaskName}"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock FontSize="30" Foreground="#FF56A1D4" Text="{Binding StartDate.TimeOfDay}"/>
+                                        <TextBlock FontSize="30" Foreground="#FF56A1D4" Text="- "/>
+                                        <TextBlock FontSize="30" Foreground="#FF56A1D4" Text="{Binding EndDate.TimeOfDay}"/>
+                                       
+                                    </StackPanel>
                                 </StackPanel>
-                            </StackPanel>
-                        </ListViewItem>
                             </DataTemplate>
-                        </ListView.Resources>
+                        </ListView.ItemTemplate>
+
                     </ListView>
                 </ScrollViewer>
             </PivotItem>
-            
+
             <PivotItem Header="This Week">
                 <ScrollViewer>
-                <StackPanel Orientation="Vertical">
-                    <TextBlock FontSize="30" Foreground="#FF56A1D4">Monday</TextBlock>
-                    <ListView>
-                        <ListViewItem>
-                            <TextBlock FontSize="20">Tema 3 SDA</TextBlock>
-                        </ListViewItem>
-                        <ListViewItem>
-                            <TextBlock FontSize="20">Proiect engleza</TextBlock>
-                        </ListViewItem>
-                        <ListViewItem>
-                            <TextBlock FontSize="20">Proiect engleza</TextBlock>
-                        </ListViewItem>
-                    </ListView>
-                    <TextBlock FontSize="30" Foreground="#FF56A1D4">Tuesday</TextBlock>
-                    <ListView>
-                        <ListViewItem>
-                            <TextBlock FontSize="20">Proiect Chimie</TextBlock>
-                        </ListViewItem>
-                    </ListView>
-                    <TextBlock FontSize="30" Foreground="#FF56A1D4">Wednesday</TextBlock>
-                    <ListView>
-                        <ListViewItem>
-                            <TextBlock FontSize="20">nothing here</TextBlock>
-                        </ListViewItem>
-                    </ListView>
-                    <TextBlock FontSize="30" Foreground="#FF56A1D4">Thursday</TextBlock>
-                    <ListView>
-                        <ListViewItem>
-                            <TextBlock FontSize="20">nothing here</TextBlock>
-                        </ListViewItem>
-                    </ListView>
-                    <TextBlock FontSize="30" Foreground="#FF56A1D4">Friday</TextBlock>
-                    <ListView>
-                        <ListViewItem>
-                            <TextBlock FontSize="20">nothing here</TextBlock>
-                        </ListViewItem>
-                    </ListView>
-                    <TextBlock FontSize="30" Foreground="#FF56A1D4">Saturday</TextBlock>
-                    <ListView>
-                        <ListViewItem>
-                            <TextBlock FontSize="20">nothing here</TextBlock>
-                        </ListViewItem>
-                    </ListView>
-                    <TextBlock FontSize="30" Foreground="#FF56A1D4">Sunday</TextBlock>
-                    <ListView>
-                        <ListViewItem>
-                            <TextBlock FontSize="20">nothing here</TextBlock>
-                        </ListViewItem>
-                    </ListView>
-                </StackPanel>
-            </ScrollViewer>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock FontSize="30" Foreground="#FF56A1D4">Monday</TextBlock>
+                        <ListView>
+                            <ListViewItem>
+                                <TextBlock FontSize="20">Tema 3 SDA</TextBlock>
+                            </ListViewItem>
+                            <ListViewItem>
+                                <TextBlock FontSize="20">Proiect engleza</TextBlock>
+                            </ListViewItem>
+                            <ListViewItem>
+                                <TextBlock FontSize="20">Proiect engleza</TextBlock>
+                            </ListViewItem>
+                        </ListView>
+                        <TextBlock FontSize="30" Foreground="#FF56A1D4">Tuesday</TextBlock>
+                        <ListView>
+                            <ListViewItem>
+                                <TextBlock FontSize="20">Proiect Chimie</TextBlock>
+                            </ListViewItem>
+                        </ListView>
+                        <TextBlock FontSize="30" Foreground="#FF56A1D4">Wednesday</TextBlock>
+                        <ListView>
+                            <ListViewItem>
+                                <TextBlock FontSize="20">nothing here</TextBlock>
+                            </ListViewItem>
+                        </ListView>
+                        <TextBlock FontSize="30" Foreground="#FF56A1D4">Thursday</TextBlock>
+                        <ListView>
+                            <ListViewItem>
+                                <TextBlock FontSize="20">nothing here</TextBlock>
+                            </ListViewItem>
+                        </ListView>
+                        <TextBlock FontSize="30" Foreground="#FF56A1D4">Friday</TextBlock>
+                        <ListView>
+                            <ListViewItem>
+                                <TextBlock FontSize="20">nothing here</TextBlock>
+                            </ListViewItem>
+                        </ListView>
+                        <TextBlock FontSize="30" Foreground="#FF56A1D4">Saturday</TextBlock>
+                        <ListView>
+                            <ListViewItem>
+                                <TextBlock FontSize="20">nothing here</TextBlock>
+                            </ListViewItem>
+                        </ListView>
+                        <TextBlock FontSize="30" Foreground="#FF56A1D4">Sunday</TextBlock>
+                        <ListView>
+                            <ListViewItem>
+                                <TextBlock FontSize="20">nothing here</TextBlock>
+                            </ListViewItem>
+                        </ListView>
+                    </StackPanel>
+                </ScrollViewer>
             </PivotItem>
             <PivotItem Header="All Tasks">
                 <ScrollViewer>

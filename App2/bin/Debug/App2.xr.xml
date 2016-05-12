@@ -2,7 +2,10 @@
 <Roots xmlns="clr-namespace:Microsoft.Xaml.Tools.XamlCompiler.RootLog;assembly=Microsoft.Windows.UI.Xaml.81.Build.Tasks">
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="Value" />
-    <RootPropertyPathName Name="TaskTime" />
+    <RootPropertyPathName Name="MainList" />
+    <RootPropertyPathName Name="EndDate" />
+    <RootPropertyPathName Name="TimeOfDay" />
+    <RootPropertyPathName Name="StartDate" />
     <RootPropertyPathName Name="TaskName" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
@@ -93,14 +96,18 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="Items" />
-      <RootProperty Name="IsItemClickEnabled" />
       <RootProperty Name="ItemsSource" />
-      <RootProperty Name="Resources" />
+      <RootProperty Name="IsItemClickEnabled" />
+      <RootProperty Name="ItemTemplate" />
       <RootEvent Name="ItemClick" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListViewItem">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Content" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.Animation.ContinuumNavigationTransitionInfo">
+      <RootMethod Name="GetExitElementContainer" />
+      <RootMethod Name="SetExitElementContainer" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
