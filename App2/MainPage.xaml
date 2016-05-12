@@ -24,8 +24,9 @@
                                 <StackPanel Orientation="Vertical">
                                     <TextBlock x:Name="TaskName" FontSize="20" Text="{Binding TaskName}"/>
                                     <StackPanel Orientation="Horizontal">
-                                        <TextBlock FontSize="30" Foreground="#FF56A1D4" Text="{Binding Description}"/>
+                                        <TextBlock FontSize="30" Foreground="#FF56A1D4" Text="{Binding StartDate.TimeOfDay}"/>
                                         <TextBlock FontSize="30" Foreground="#FF56A1D4" Text="- "/>
+                                        <TextBlock FontSize="30" Foreground="#FF56A1D4" Text="{Binding EndDate.TimeOfDay}"/>
                                        
                                     </StackPanel>
                                 </StackPanel>

@@ -45,6 +45,8 @@ namespace App2
             Globals.TaskList[0] = new TaskObject();
             Globals.TaskList[0].TaskName = "random task name";
             Globals.TaskList[0].Description = "much random description";
+            Globals.TaskList[0].StartDate = new DateTime(2016, 5, 12, 18, 0, 0);
+            Globals.TaskList[0].EndDate = new DateTime(2016, 5, 12, 19, 0, 0);
 
             List<TaskObject> MainList = new List<TaskObject>();
             MainList.Add(Globals.TaskList[0]);

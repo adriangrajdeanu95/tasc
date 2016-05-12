@@ -3,7 +3,9 @@
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="Value" />
     <RootPropertyPathName Name="MainList" />
-    <RootPropertyPathName Name="Description" />
+    <RootPropertyPathName Name="EndDate" />
+    <RootPropertyPathName Name="TimeOfDay" />
+    <RootPropertyPathName Name="StartDate" />
     <RootPropertyPathName Name="TaskName" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>

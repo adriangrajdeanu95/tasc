@@ -13,11 +13,15 @@ namespace App2
         public string TaskName { get; set; }
         public string Description { get; set; }
         public DateTime Deadline, AdditionDate;
-        public DateTime StartDate, EndDate;
-        public double UserPriority, EstimatedTime, Sessions;
-        public double TruePriority;
-        public int Type;
-        public int[] CloneIndexes;
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate{ get; set; }
+        public double UserPriority { get; set; }
+        public double EstimatedTime { get; set; }
+        public double Sessions { get; set; }
+        public double TruePriority { get; set; }
+        public int Type { get; set; }
+        public int[] CloneIndexes { get; set; }
+        public int TaskIndex { get; set; }
         //int Category;
 
 
