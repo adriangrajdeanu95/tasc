@@ -38,10 +38,32 @@ namespace App2
             HardwareButtons.BackPressed += HardwareButtons_BackPressed;
         }
 
+        TaskObject VAR = new TaskObject();
+        double aux1, aux2;
+
         private void AddNewTaskButton_Click(object sender, RoutedEventArgs e)
         {
+            VAR.ChangeName(TextBoxTitle.Text);
+            VAR.ChangeDescription(TextBoxDescription.Text);
+            VAR.UserPriority = newpriorityslider.Value;
+            VAR.Deadline = Convert.ToDateTime(Deadline.Date);
+            double.TryParse(TextBoxHours.Text, out aux1);
+            double.TryParse(TextBoxMinutes.Text, out aux2);
+            VAR.EstimatedTime = aux1+aux2/60;
+            VAR.AdditionDate = DateTime.Now;
 
+            //TO CALCULATE THE EXTRA PARAM - HELDUP HOURS
 
+            VAR.CalculateTruePriority(0);
+
+            Array.Resize(ref Globals.TaskList, Globals.TaskList.Length + 1);
+            Globals.TaskList[Globals.TaskList.Length + 1] = VAR;
+
+            CalculatorClass.ScheduleCalculate();
+
+            string parameter = "true";
+
+            this.Frame.Navigate(typeof(MainPage), parameter);
         }
 
         private void canceltask_Click(object sender, RoutedEventArgs e)
