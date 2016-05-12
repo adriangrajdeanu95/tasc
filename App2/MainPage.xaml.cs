@@ -31,19 +31,25 @@ namespace App2
             public string TaskTime { get; set; }
         }
 
+        public static ObservableCollection<DataSet> ListData { get; set; }
+
+
         public MainPage()
         {
             this.InitializeComponent();
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
 
-
-            var item = new DataSet();
             DateTime date1 = new DateTime(2008, 6, 1, 7, 47, 0);
             DateTime date2 = new DateTime(2008, 6, 1, 9, 37, 0);
+
+            
+
+            var item = new DataSet();
             item.TaskName = "Hello new task";
             item.TaskTime = date1.TimeOfDay + "- " + date2.TimeOfDay;
-            TodayList.Items.Add(item);
+            //TodayList.Items.Add("STUFF");
+            TodayList.ItemsSource = item;
         }
 
         /// <summary>
