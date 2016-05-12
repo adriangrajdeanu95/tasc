@@ -25,7 +25,7 @@ namespace App2
     public sealed partial class MainPage : Page
     {
 
-        
+        public static TaskObject CurrentTask { get; set; }
         public MainPage()
         {
             this.InitializeComponent();
@@ -86,12 +86,12 @@ namespace App2
         private void AddAppBarButton_Click(object sender, RoutedEventArgs e)
         {
 
-            Frame.Navigate(typeof(AddNewTask));
             this.Frame.Navigate(typeof(AddNewTask));
         }
 
         private void ListView_ItemClick(object sender, ItemClickEventArgs e)
         {
+            CurrentTask = (TaskObject)this.TodayList.SelectedItem;
             Frame.Navigate(typeof(TaskPage));
         }
 

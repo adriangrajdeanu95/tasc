@@ -9,6 +9,7 @@ namespace App2
     public static class Globals
     {
         public static TaskObject[] TaskList;
+        public static int TaskIndex;
 
         public static DateTime WakeUpTime = new DateTime(1, 1, 1, 8, 0, 0);
         public static DateTime BedTime = new DateTime(1, 1, 1, 22, 0, 0);

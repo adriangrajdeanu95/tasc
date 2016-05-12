@@ -11,7 +11,7 @@
 
     <Grid >
         <StackPanel>
-            <TextBlock x:Name="TaskTitle" HorizontalAlignment="Left" Margin="40,10,0,0" Style="{StaticResource TitleTextBlockStyle}" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" Text="Current Task" FontFamily="Segoe WP Light" FontWeight="Normal"/>
+            <TextBlock x:Name="TaskTitle" HorizontalAlignment="Left" Margin="40,10,0,0" Style="{StaticResource TitleTextBlockStyle}" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" Text="{Binding}" FontFamily="Segoe WP Light" FontWeight="Normal"/>
             <TextBlock x:Name="TaskDescription" Margin="20,35,20,0" TextWrapping="Wrap" Text="Task Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consequat et diam quis pharetra. Praesent eget lectus et lacus finibus." VerticalAlignment="Top" FontSize="18" TextAlignment="Justify" d:LayoutOverrides="Width, LeftPosition, RightPosition"/>
             <TextBlock x:Name="TaskPriority" Margin="20,20,20,0" TextWrapping="Wrap" Text="Priority: random_number" FontSize="22"/>
             <TextBlock x:Name="TaskDeadline" Margin="20,0,20,0" TextWrapping="Wrap" Text="Deadline: random_Date/time" FontSize="22"/>
