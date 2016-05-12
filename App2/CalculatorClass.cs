@@ -15,11 +15,11 @@ namespace App2
         }
     }
 
-    class CalculatorClass
+    public class CalculatorClass
     {
-        TruePriorityComparer TPC = new TruePriorityComparer();
+        static TruePriorityComparer TPC = new TruePriorityComparer();
 
-        public void ScheduleCalculate()
+        public static void ScheduleCalculate()
         {
             Array.Sort(Globals.TaskList, TPC);
             DateTime StartMoment = DateTime.Now;

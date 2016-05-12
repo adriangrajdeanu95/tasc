@@ -24,8 +24,11 @@ namespace App2
     /// </summary>
     public sealed partial class MainPage : Page
     {
-
+        
         public static TaskObject CurrentTask { get; set; }
+
+        List<TaskObject> MainList = new List<TaskObject>();
+        
         public MainPage()
         {
             this.InitializeComponent();
@@ -48,7 +51,7 @@ namespace App2
             Globals.TaskList[0].StartDate = new DateTime(2016, 5, 12, 18, 0, 0);
             Globals.TaskList[0].EndDate = new DateTime(2016, 5, 12, 19, 0, 0);
 
-            List<TaskObject> MainList = new List<TaskObject>();
+            
             MainList.Add(Globals.TaskList[0]);
             MainList.Add(Globals.TaskList[0]);
             TodayList.ItemsSource = MainList;
@@ -76,6 +79,11 @@ namespace App2
             // Windows.Phone.UI.Input.HardwareButtons.BackPressed event.
             // If you are using the NavigationHelper provided by some templates,
             // this event is handled for you.
+
+            var par = e.Parameter as string;
+            if (par == "true")
+                MainList.Add(Globals.TaskList[Globals.TaskList.Length-1]);
+
         }
 
         private void FilterAppBarButton_Click(object sender, RoutedEventArgs e)
