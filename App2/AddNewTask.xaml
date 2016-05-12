@@ -20,27 +20,16 @@
                 </ScrollViewer>
             <TextBlock FontSize="20">Priority</TextBlock>
             <StackPanel Orientation="Horizontal">
-                <Slider x:Name="newpriorityslider" Background="#FFD0D8DD" TickFrequency="1" Maximum="5" Minimum="1" Width="320"></Slider>
+                <Slider x:Name="newpriorityslider" Background="#FFD0D8DD" TickFrequency="1" Maximum="5" Minimum="1" Width="320" Value="1"></Slider>
                     <TextBlock Text="{Binding ElementName=newpriorityslider,Path=Value}" Margin="20,5,0,0" FontSize="30"></TextBlock>
             </StackPanel>
             <TextBlock FontSize="20">Deadline</TextBlock>
-            <ComboBox PlaceholderText="Pick a date" Width="150" Margin="0,0,220,0">
-               <ComboBoxItem>Item1</ComboBoxItem>
-               <ComboBoxItem>Item2</ComboBoxItem>
-               <ComboBoxItem>Item3</ComboBoxItem>
-             </ComboBox>
-             <TextBlock FontSize="20">Estimated time to finish</TextBlock>
+                <DatePicker HorizontalAlignment="Left" Width="135"></DatePicker>             
+             <TextBlock FontSize="20">Estimated time to finish and sessions nr.</TextBlock>
                 <StackPanel Orientation="Horizontal">
-                    <ComboBox PlaceholderText="hours" Width="100">
-                        <ComboBoxItem>Item1</ComboBoxItem>
-                        <ComboBoxItem>Item2</ComboBoxItem>
-                        <ComboBoxItem>Item3</ComboBoxItem>
-                    </ComboBox>
-                    <ComboBox PlaceholderText="minutes" Width="100">
-                        <ComboBoxItem>Item1</ComboBoxItem>
-                        <ComboBoxItem>Item2</ComboBoxItem>
-                        <ComboBoxItem>Item3</ComboBoxItem>
-                    </ComboBox>
+                    <TextBox x:Name="TextBoxHours" Margin="20,0,10,0" Width="75"></TextBox>
+                    <TextBox x:Name="TextBoxMinutes" Width="75"></TextBox>
+                    <TextBox x:Name="TextBoxSessions" Margin="80,0,0,0" Width="75"></TextBox>
                 </StackPanel>
             </StackPanel>
         </StackPanel>

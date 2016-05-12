@@ -41,6 +41,7 @@ namespace App2
         private void AddNewTaskButton_Click(object sender, RoutedEventArgs e)
         {
 
+
         }
 
         private void canceltask_Click(object sender, RoutedEventArgs e)
