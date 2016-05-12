@@ -27,6 +27,7 @@ namespace App2
 
         public class DataSet
         {
+            public DataSet() { }
             public string TaskName { get; set; }
             public string TaskTime { get; set; }
         }
