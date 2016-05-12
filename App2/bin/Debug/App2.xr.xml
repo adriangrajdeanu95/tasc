@@ -89,12 +89,12 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.PivotItem">
       <RootProperty Name="Header" />
-      <RootProperty Name="DataContext" />
       <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="Items" />
       <RootProperty Name="IsItemClickEnabled" />
+      <RootProperty Name="ItemsSource" />
       <RootProperty Name="Resources" />
       <RootEvent Name="ItemClick" />
     </RootType>

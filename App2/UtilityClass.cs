@@ -76,15 +76,26 @@ namespace App2
             }
         }
         
+        public void DataToText()
+        {
+            string ObjectString = "";
+            for (int i=0; i<Globals.TaskList.Length; i++)
+            {
+                ObjectString += Globals.TaskList[i].TaskName + '\n';
+                ObjectString += Globals.TaskList[i].Description + '\n';
+                ObjectString += Convert.ToString(Globals.TaskList[i].Deadline) + '\n';
+                ObjectString += Convert.ToString(Globals.TaskList[i].AdditionDate) + '\n';
+                ObjectString += Convert.ToString(Globals.TaskList[i].StartDate) + '\n';
+                ObjectString += Convert.ToString(Globals.TaskList[i].EndDate) + '\n';
+                ObjectString += Convert.ToString(Globals.TaskList[i].UserPriority) + '\n';
+                ObjectString += Convert.ToString(Globals.TaskList[i].EstimatedTime) + '\n';
+                ObjectString += Convert.ToString(Globals.TaskList[i].Sessions) + '\n';
+                ObjectString += Convert.ToString(Globals.TaskList[i].TruePriority) + '\n';
+                ObjectString += string.Join(" ", Globals.TaskList[i].CloneIndexes) + '\n';              
+            }
 
+            saveStringToLocalFile("data.txt", ObjectString);
+        }
 
     }
 }
-/*string TaskName, Description;
-        DateTime Deadline, AdditionDate;
-        DateTime StartDate, EndDate;
-        double UserPriority, EstimatedTime, Sessions;
-        double TruePriority;
-        int Type;
-        int[] CloneIndexes;
-*/
