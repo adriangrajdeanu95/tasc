@@ -60,6 +60,8 @@ namespace App2
 
 
             TodayList.ItemsSource = ItemLists;
+            WeekList.ItemsSource = ItemLists;
+            ALLList.ItemsSource = ItemLists;
         }
 
         private void FilterAppBarButton_Click(object sender, RoutedEventArgs e)
