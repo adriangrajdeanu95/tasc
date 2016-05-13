@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.Phone.UI.Input;
+using Windows.UI.Popups;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
 
@@ -38,11 +39,8 @@ namespace App2
             HardwareButtons.BackPressed += HardwareButtons_BackPressed;
         }
 
-        
-
-        private void AddNewTaskButton_Click(object sender, RoutedEventArgs e)
+        public void AddANewTask()
         {
-
             TaskObject VAR = new TaskObject();
             double aux1, aux2;
 
@@ -51,22 +49,29 @@ namespace App2
             VAR.UserPriority = newpriorityslider.Value;
             double.TryParse(TextBoxHours.Text, out aux1);
             double.TryParse(TextBoxMinutes.Text, out aux2);
-            VAR.EstimatedTime = aux1+aux2/60;
+            VAR.EstimatedTime = aux1 + aux2 / 60;
             VAR.AdditionDate = DateTime.Now;
             VAR.Deadline = new DateTime(2016, 6, 1, 0, 0, 0);
-            Globals.TaskList.Add(VAR);
 
             //TO CALCULATE THE EXTRA PARAM - HELDUP HOURS
 
             VAR.CalculateTruePriority(0);
 
-            //Array.Resize(ref Globals.TaskList, Globals.TaskList.Length + 1);
-            //  Globals.TaskList[Globals.TaskList.Length-1] = VAR;
+            Globals.TaskList.Add(VAR);
 
             //  CalculatorClass.ScheduleCalculate();
-           
+        }
 
-            this.Frame.Navigate(typeof(MainPage));
+
+
+        private void AddNewTaskButton_Click(object sender, RoutedEventArgs e)
+        {
+            AddANewTask();
+
+            if (Frame.CanGoBack)
+            {
+                Frame.GoBack();
+            }
         }
 
         private void canceltask_Click(object sender, RoutedEventArgs e)

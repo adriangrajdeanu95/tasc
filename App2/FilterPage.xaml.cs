@@ -40,12 +40,20 @@ namespace App2
 
         private void CancelFilterButton_Click(object sender, RoutedEventArgs e)
         {
-
+            if (Frame.CanGoBack)
+            {
+                Frame.GoBack();
+            }
         }
 
         private void ValidateFilterButton_Click(object sender, RoutedEventArgs e)
         {
+            //set stuff here
 
+            if (Frame.CanGoBack)
+            {
+                Frame.GoBack();
+            }
         }
 
         private void HardwareButtons_BackPressed(object sender, BackPressedEventArgs e)

@@ -24,15 +24,19 @@ namespace App2
                                                                             /// </summary>
     public sealed partial class MainPage : Page
     {
+
+        public ObservableCollection<TaskObject> ItemLists { get; set; }
         
-        
-        
+
         public MainPage()
         {
             this.InitializeComponent();
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
-                                    
+
+            Globals.TaskList = new List<TaskObject>();
+
+            //ItemLists = new ObservableCollection<TaskObject>();
         }
 
                                                                             /// <summary>
@@ -50,19 +54,14 @@ namespace App2
             // If you are using the NavigationHelper provided by some templates,
             // this event is handled for you.
 
-            TaskObject CurrentDummy = new TaskObject();
-            CurrentDummy.Description = "random task name";
-            if (Globals.TaskList!=null) CurrentDummy.TaskName = Convert.ToString(Globals.TaskList.Count);
-            CurrentDummy.StartDate = new DateTime(2016, 5, 12, 18, 0, 0);
-            CurrentDummy.EndDate = new DateTime(2016, 5, 12, 19, 0, 0);
+            ItemLists = new ObservableCollection<TaskObject>();
+            foreach (TaskObject element in Globals.TaskList)
+                ItemLists.Add(element);
 
-            
-            Globals.TaskList = new List<TaskObject>();
-            Globals.TaskList.Add(CurrentDummy);
-            Globals.TaskList.Add(CurrentDummy);
-            
 
-            TodayList.ItemsSource = Globals.TaskList;
+            TodayList.ItemsSource = ItemLists;
+            WeekList.ItemsSource = ItemLists;
+            ALLList.ItemsSource = ItemLists;
         }
 
         private void FilterAppBarButton_Click(object sender, RoutedEventArgs e)

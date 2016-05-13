@@ -27,121 +27,50 @@
                                         <TextBlock FontSize="30" Foreground="#FF56A1D4" Text="{Binding StartDate.TimeOfDay}"/>
                                         <TextBlock FontSize="30" Foreground="#FF56A1D4" Text="- "/>
                                         <TextBlock FontSize="30" Foreground="#FF56A1D4" Text="{Binding EndDate.TimeOfDay}"/>
-                                       
+
                                     </StackPanel>
                                 </StackPanel>
                             </DataTemplate>
                         </ListView.ItemTemplate>
-
                     </ListView>
                 </ScrollViewer>
             </PivotItem>
 
             <PivotItem Header="This Week">
                 <ScrollViewer>
-                    <StackPanel Orientation="Vertical">
-                        <TextBlock FontSize="30" Foreground="#FF56A1D4">Monday</TextBlock>
-                        <ListView>
-                            <ListViewItem>
-                                <TextBlock FontSize="20">Tema 3 SDA</TextBlock>
-                            </ListViewItem>
-                            <ListViewItem>
-                                <TextBlock FontSize="20">Proiect engleza</TextBlock>
-                            </ListViewItem>
-                            <ListViewItem>
-                                <TextBlock FontSize="20">Proiect engleza</TextBlock>
-                            </ListViewItem>
-                        </ListView>
-                        <TextBlock FontSize="30" Foreground="#FF56A1D4">Tuesday</TextBlock>
-                        <ListView>
-                            <ListViewItem>
-                                <TextBlock FontSize="20">Proiect Chimie</TextBlock>
-                            </ListViewItem>
-                        </ListView>
-                        <TextBlock FontSize="30" Foreground="#FF56A1D4">Wednesday</TextBlock>
-                        <ListView>
-                            <ListViewItem>
-                                <TextBlock FontSize="20">nothing here</TextBlock>
-                            </ListViewItem>
-                        </ListView>
-                        <TextBlock FontSize="30" Foreground="#FF56A1D4">Thursday</TextBlock>
-                        <ListView>
-                            <ListViewItem>
-                                <TextBlock FontSize="20">nothing here</TextBlock>
-                            </ListViewItem>
-                        </ListView>
-                        <TextBlock FontSize="30" Foreground="#FF56A1D4">Friday</TextBlock>
-                        <ListView>
-                            <ListViewItem>
-                                <TextBlock FontSize="20">nothing here</TextBlock>
-                            </ListViewItem>
-                        </ListView>
-                        <TextBlock FontSize="30" Foreground="#FF56A1D4">Saturday</TextBlock>
-                        <ListView>
-                            <ListViewItem>
-                                <TextBlock FontSize="20">nothing here</TextBlock>
-                            </ListViewItem>
-                        </ListView>
-                        <TextBlock FontSize="30" Foreground="#FF56A1D4">Sunday</TextBlock>
-                        <ListView>
-                            <ListViewItem>
-                                <TextBlock FontSize="20">nothing here</TextBlock>
-                            </ListViewItem>
-                        </ListView>
-                    </StackPanel>
+                    <ListView x:Name="WeekList" 
+                              ItemsSource="{Binding Globals.TaskList}" 
+                              ItemClick="ListView_ItemClick" 
+                              IsItemClickEnabled="True"
+                              ContinuumNavigationTransitionInfo.ExitElementContainer="True">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock FontSize="30" Text="{Binding TaskName}"/>
+                                    <TextBlock FontSize="30" Foreground="#FF56A1D4" Text=" for&#160;"/>
+                                    <TextBlock FontSize="30" Foreground="#FF56A1D4" Text="{Binding StartDate.DayOfWeek}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
                 </ScrollViewer>
             </PivotItem>
             <PivotItem Header="All Tasks">
                 <ScrollViewer>
-                    <ListView ItemClick="ListView_ItemClick">
-                        <ListViewItem HorizontalAlignment="Stretch">
-                            <StackPanel Orientation="Vertical">
-                                <TextBlock FontSize="20">Tema SDA 3</TextBlock>
+                    <ListView x:Name="ALLList" 
+                              ItemsSource="{Binding Globals.TaskList}" 
+                              ItemClick="ListView_ItemClick" 
+                              IsItemClickEnabled="True"
+                              ContinuumNavigationTransitionInfo.ExitElementContainer="True">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">16:00</TextBlock>
-                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">  -</TextBlock>
-                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">19:30</TextBlock>
-                                    <TextBlock FontSize="25" Foreground="#FF56A1D4" Margin="20,1,0,0">tue</TextBlock>
-                                    <TextBlock FontSize="25" Foreground="#FF56A1D4" Margin="10,1,0,0">3/5/2016</TextBlock>
+                                    <TextBlock FontSize="30" Text="{Binding TaskName}"/>
+                                    <TextBlock FontSize="30" Foreground="#FF56A1D4" Text=" for&#160;"/>
+                                    <TextBlock FontSize="30" Foreground="#FF56A1D4" Text="{Binding StartDate.Date}"/>
                                 </StackPanel>
-                            </StackPanel>
-                        </ListViewItem>
-                        <ListViewItem>
-                            <StackPanel Orientation="Vertical">
-                                <TextBlock FontSize="20">Referat fizica</TextBlock>
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">19:30</TextBlock>
-                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">  -</TextBlock>
-                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">20:00</TextBlock>
-                                    <TextBlock FontSize="25" Foreground="#FF56A1D4" Margin="20,1,0,0">tue</TextBlock>
-                                    <TextBlock FontSize="25" Foreground="#FF56A1D4" Margin="10,1,0,0">3/5/2016</TextBlock>
-                                </StackPanel>
-                            </StackPanel>
-                        </ListViewItem>
-                        <ListViewItem>
-                            <StackPanel Orientation="Vertical">
-                                <TextBlock FontSize="20">Proiect engleza</TextBlock>
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">20:30</TextBlock>
-                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">  -</TextBlock>
-                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">22:30</TextBlock>
-                                    <TextBlock FontSize="25" Foreground="#FF56A1D4" Margin="20,1,0,0">tue</TextBlock>
-                                    <TextBlock FontSize="25" Foreground="#FF56A1D4" Margin="10,1,0,0">3/5/2016</TextBlock>
-                                </StackPanel>
-                            </StackPanel>
-                        </ListViewItem>
-                        <ListViewItem>
-                            <StackPanel Orientation="Vertical">
-                                <TextBlock FontSize="20">Proiect chimie</TextBlock>
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">15:45</TextBlock>
-                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">  -</TextBlock>
-                                    <TextBlock FontSize="30" Foreground="#FF56A1D4">17:15</TextBlock>
-                                    <TextBlock FontSize="25" Foreground="#FF56A1D4" Margin="20,1,0,0">wed</TextBlock>
-                                    <TextBlock FontSize="25" Foreground="#FF56A1D4" Margin="10,1,0,0">4/5/2016</TextBlock>
-                                </StackPanel>
-                            </StackPanel>
-                        </ListViewItem>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
                     </ListView>
                 </ScrollViewer>
             </PivotItem>

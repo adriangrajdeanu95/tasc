@@ -110,12 +110,18 @@ namespace App2
             value = int.Parse(TextBoxSundayE.Text);
             Globals.SundayEndTime = new DateTime(1, 1, 1, value, 0, 0);
 
-            this.Frame.Navigate(typeof(MainPage));
+            if (Frame.CanGoBack)
+            {
+                Frame.GoBack();
+            }
         }
 
         private void cancelprefs_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(MainPage));
+            if (Frame.CanGoBack)
+            {
+                Frame.GoBack();
+            }
         }
 
         private async void PrefInfoRoutine_Tapped(object sender, TappedRoutedEventArgs e)
