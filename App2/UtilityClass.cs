@@ -76,26 +76,26 @@ namespace App2
             }
         }
         
-     /*   public static async Task DataToText()
+        public static async Task DataToText()
         {
             string ObjectString = "";
-            for (int i=0; i<Globals.TaskList.Length; i++)
+            foreach (TaskObject element in Globals.TaskList)
             {
-                ObjectString += Globals.TaskList[i].TaskName + '\n';
-                ObjectString += Globals.TaskList[i].Description + '\n';
-                ObjectString += Convert.ToString(Globals.TaskList[i].Deadline) + '\n';
-                ObjectString += Convert.ToString(Globals.TaskList[i].AdditionDate) + '\n';
-                ObjectString += Convert.ToString(Globals.TaskList[i].StartDate) + '\n';
-                ObjectString += Convert.ToString(Globals.TaskList[i].EndDate) + '\n';
-                ObjectString += Convert.ToString(Globals.TaskList[i].UserPriority) + '\n';
-                ObjectString += Convert.ToString(Globals.TaskList[i].EstimatedTime) + '\n';
-                ObjectString += Convert.ToString(Globals.TaskList[i].Sessions) + '\n';
-                ObjectString += Convert.ToString(Globals.TaskList[i].TruePriority) + '\n';
-                ObjectString += string.Join(" ", Globals.TaskList[i].CloneIndexes) + '\n';              
+                ObjectString += element.TaskName + '\n';
+                ObjectString += element.Description + '\n';
+                ObjectString += Convert.ToString(element.Deadline) + '\n';
+                ObjectString += Convert.ToString(element.AdditionDate) + '\n';
+                ObjectString += Convert.ToString(element.StartDate) + '\n';
+                ObjectString += Convert.ToString(element.EndDate) + '\n';
+                ObjectString += Convert.ToString(element.UserPriority) + '\n';
+                ObjectString += Convert.ToString(element.EstimatedTime) + '\n';
+                ObjectString += Convert.ToString(element.Sessions) + '\n';
+                ObjectString += Convert.ToString(element.TruePriority) + '\n';
+                ObjectString += string.Join(" ", element.CloneIndexes) + '\n';              
             }
 
             await saveStringToLocalFile("data.txt", ObjectString);
         }
-        */
+        
     }
 }
