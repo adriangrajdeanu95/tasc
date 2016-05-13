@@ -24,7 +24,6 @@ namespace App2
             Globals.TaskList = (List<TaskObject>)Globals.TaskList.OrderByDescending(f => f.TruePriority);
             DateTime StartMoment = DateTime.Now;
             DateTime WeekDayStart = DateTime.Now, WeekDayEnd = DateTime.Now;
-            int i;
             bool checker;
 
             foreach(TaskObject element in Globals.TaskList)
