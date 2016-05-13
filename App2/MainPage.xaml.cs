@@ -19,55 +19,27 @@ using Windows.UI.Xaml.Navigation;
 
 namespace App2
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
+                                                                            /// <summary>
+                                                                            /// An empty page that can be used on its own or navigated to within a Frame.
+                                                                            /// </summary>
     public sealed partial class MainPage : Page
     {
         
-        List<TaskObject> MainList = new List<TaskObject>();
+        
         
         public MainPage()
         {
             this.InitializeComponent();
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
-
-
-            // adding functionality
-            //
-            //
-            //
-            //
-            //
-            //
-            //
-            Globals.TaskList = new TaskObject[1];
-            Globals.TaskList[0] = new TaskObject();
-            Globals.TaskList[0].TaskName = "random task name";
-            Globals.TaskList[0].Description = "much random description";
-            Globals.TaskList[0].StartDate = new DateTime(2016, 5, 12, 18, 0, 0);
-            Globals.TaskList[0].EndDate = new DateTime(2016, 5, 12, 19, 0, 0);
-
-            
-            MainList.Add(Globals.TaskList[0]);
-            MainList.Add(Globals.TaskList[0]);
-            TodayList.ItemsSource = MainList;
-
-
-            //
-            //
-            //
-            //
-            //
-                        
+                                    
         }
 
-        /// <summary>
-        /// Invoked when this page is about to be displayed in a Frame.
-        /// </summary>
-        /// <param name="e">Event data that describes how this page was reached.
-        /// This parameter is typically used to configure the page.</param>
+                                                                            /// <summary>
+                                                                            /// Invoked when this page is about to be displayed in a Frame.
+                                                                            /// </summary>
+                                                                            /// <param name="e">Event data that describes how this page was reached.
+                                                                            /// This parameter is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             // TODO: Prepare page for display here.
@@ -78,11 +50,18 @@ namespace App2
             // If you are using the NavigationHelper provided by some templates,
             // this event is handled for you.
 
-            var par = e.Parameter as string;
-            if (par=="true")
-                MainList.Add(Globals.TaskList[Globals.TaskList.Length-1]);
-            TodayList.ItemsSource = MainList;
+            TaskObject CurrentDummy = new TaskObject();
+            CurrentDummy.TaskName = "random task name";
+            CurrentDummy.Description = "much random description";
+            CurrentDummy.StartDate = new DateTime(2016, 5, 12, 18, 0, 0);
+            CurrentDummy.EndDate = new DateTime(2016, 5, 12, 19, 0, 0);
 
+            
+            Globals.TaskList = new List<TaskObject>();
+            Globals.TaskList.Add(CurrentDummy);
+            Globals.TaskList.Add(CurrentDummy);
+
+            TodayList.ItemsSource = Globals.TaskList;
         }
 
         private void FilterAppBarButton_Click(object sender, RoutedEventArgs e)

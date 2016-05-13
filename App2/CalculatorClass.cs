@@ -19,7 +19,7 @@ namespace App2
     {
         static TruePriorityComparer TPC = new TruePriorityComparer();
 
-        public static void ScheduleCalculate()
+      /*  public static void ScheduleCalculate()
         {
             Array.Sort(Globals.TaskList, TPC);
             DateTime StartMoment = DateTime.Now;
@@ -86,6 +86,6 @@ namespace App2
                     i--;
                 }
             }
-        }
+        } */
     }
 }

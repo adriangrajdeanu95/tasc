@@ -15,7 +15,7 @@
             <PivotItem Header="Today">
                 <ScrollViewer>
                     <ListView x:Name="TodayList" 
-                              ItemsSource="{Binding MainList}" 
+                              ItemsSource="{Binding Globals.TaskList}" 
                               ItemClick="ListView_ItemClick" 
                               IsItemClickEnabled="True"
                               ContinuumNavigationTransitionInfo.ExitElementContainer="True">

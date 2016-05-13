@@ -76,7 +76,7 @@ namespace App2
             }
         }
         
-        public static async Task DataToText()
+     /*   public static async Task DataToText()
         {
             string ObjectString = "";
             for (int i=0; i<Globals.TaskList.Length; i++)
@@ -96,6 +96,6 @@ namespace App2
 
             await saveStringToLocalFile("data.txt", ObjectString);
         }
-
+        */
     }
 }

@@ -56,10 +56,10 @@ namespace App2
 
             VAR.CalculateTruePriority(0);
 
-            Array.Resize(ref Globals.TaskList, Globals.TaskList.Length + 1);
-            Globals.TaskList[Globals.TaskList.Length-1] = VAR;
+           // Array.Resize(ref Globals.TaskList, Globals.TaskList.Length + 1);
+          //  Globals.TaskList[Globals.TaskList.Length-1] = VAR;
 
-            CalculatorClass.ScheduleCalculate();
+          //  CalculatorClass.ScheduleCalculate();
 
             string parameter = "true";
 

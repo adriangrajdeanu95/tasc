@@ -8,7 +8,7 @@ namespace App2
 {
     public static class Globals
     {
-        public static TaskObject[] TaskList;
+        public static List<TaskObject> TaskList;
         public static TaskObject CurrentTask { get; set; }
 
         public static DateTime WakeUpTime = new DateTime(1, 1, 1, 8, 0, 0);
