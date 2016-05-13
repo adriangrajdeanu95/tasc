@@ -16,7 +16,7 @@
                     <TextBlock FontSize="20">Waking hours</TextBlock>
                     <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
                         <TextBox InputScope="Number" x:Name="TextBoxWake" Margin="20,0,10,0" Width="60" Height="20"/>
-                        <TextBox InputScope="Number"  x:Name="TextBoxSleep" Margin="0,0,0,0" Width="60" Height="20"/>
+                        <TextBox InputScope="Number" x:Name="TextBoxSleep" Margin="0,0,0,0" Width="60" Height="20"/>
                         <TextBlock x:Name="PrefInfoRoutine" FontSize="25" Margin="190,0,0,0" Tapped="PrefInfoRoutine_Tapped">(?)</TextBlock>
                     </StackPanel>
                     <TextBlock FontSize="25">Daily schedule</TextBlock>
