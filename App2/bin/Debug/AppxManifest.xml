@@ -10,7 +10,7 @@
   <Identity Name="2a08a159-e013-4e9f-8f19-483f9ae1e98c" Publisher="CN=Adrian.Grajdeanu" Version="1.0.0.0" ProcessorArchitecture="neutral" />
   <mp:PhoneIdentity PhoneProductId="2a08a159-e013-4e9f-8f19-483f9ae1e98c" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>App2</DisplayName>
+    <DisplayName>T.A.S.C.</DisplayName>
     <PublisherDisplayName>Adrian.Grajdeanu</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -23,15 +23,12 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="App2.exe" EntryPoint="App2.App">
-      <m3:VisualElements DisplayName="App2" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="App2" ForegroundText="light" BackgroundColor="transparent">
-        <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png" />
+      <m3:VisualElements DisplayName="T.A.S.C." Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="T.A.S.C. is your accountant when the currency is time" ForegroundText="light" BackgroundColor="transparent" ToastCapable="true">
+        <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png"></m3:DefaultTile>
         <m3:SplashScreen Image="Assets\SplashScreen.png" />
       </m3:VisualElements>
     </Application>
   </Applications>
-  <Capabilities>
-    <Capability Name="internetClientServer" />
-  </Capabilities>
   <build:Metadata>
     <build:Item Name="TargetFrameworkMoniker" Value="WindowsPhoneApp,Version=v8.1" />
     <build:Item Name="VisualStudio" Version="14.0" />
