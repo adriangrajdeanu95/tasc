@@ -5,7 +5,7 @@
     <RootPropertyPathName Name="Globals" />
     <RootPropertyPathName Name="CurrentTask" />
     <RootPropertyPathName Name="TaskName" />
-    <RootPropertyPathName Name="MainList" />
+    <RootPropertyPathName Name="TaskList" />
     <RootPropertyPathName Name="EndDate" />
     <RootPropertyPathName Name="TimeOfDay" />
     <RootPropertyPathName Name="StartDate" />
@@ -38,10 +38,13 @@
       <RootProperty Name="Inlines" />
       <RootProperty Name="TextAlignment" />
       <RootProperty Name="Foreground" />
+      <RootEvent Name="Tapped" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="Text" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Width" />
+      <RootProperty Name="InputScope" />
       <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
@@ -76,7 +79,6 @@
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="App2.AddNewTask" />
-    <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="App2.Preferences" />
     <RootType FullName="Windows.UI.Xaml.Controls.RadioButton">
       <RootProperty Name="Content" />

@@ -51,8 +51,8 @@ namespace App2
             // this event is handled for you.
 
             TaskObject CurrentDummy = new TaskObject();
-            CurrentDummy.TaskName = "random task name";
-            CurrentDummy.Description = "much random description";
+            CurrentDummy.Description = "random task name";
+            if (Globals.TaskList!=null) CurrentDummy.TaskName = Convert.ToString(Globals.TaskList.Count);
             CurrentDummy.StartDate = new DateTime(2016, 5, 12, 18, 0, 0);
             CurrentDummy.EndDate = new DateTime(2016, 5, 12, 19, 0, 0);
 
@@ -60,6 +60,7 @@ namespace App2
             Globals.TaskList = new List<TaskObject>();
             Globals.TaskList.Add(CurrentDummy);
             Globals.TaskList.Add(CurrentDummy);
+            
 
             TodayList.ItemsSource = Globals.TaskList;
         }
