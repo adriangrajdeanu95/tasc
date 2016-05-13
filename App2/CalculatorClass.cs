@@ -7,21 +7,28 @@ using System.Threading.Tasks;
 
 namespace App2
 {
-    public class TruePriorityComparer : IComparer<TaskObject>
+
+    public class PriorityComparer : IComparer<TaskObject>
     {
         public int Compare(TaskObject x, TaskObject y)
         {
-            return x.TruePriority.CompareTo(y.TruePriority);
+
+            if (x.TruePriority > y.TruePriority)
+                return -1;
+            if (x == y)
+                return 0;
+            return 1;
         }
     }
 
     public class CalculatorClass
     {
-        static TruePriorityComparer TPC = new TruePriorityComparer();
 
-      public static void ScheduleCalculate()
+        public static PriorityComparer TPC = new PriorityComparer();
+        
+        public static void ScheduleCalculate()
         {
-            Globals.TaskList = (List<TaskObject>)Globals.TaskList.OrderByDescending(f => f.TruePriority);
+            Globals.TaskList.Sort(TPC);
             DateTime StartMoment = DateTime.Now;
             DateTime WeekDayStart = DateTime.Now, WeekDayEnd = DateTime.Now;
             bool checker;

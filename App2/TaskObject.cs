@@ -12,9 +12,10 @@ namespace App2
     {
         public string TaskName { get; set; }
         public string Description { get; set; }
-        public DateTime Deadline, AdditionDate;
+        public DateTime Deadline { get; set; }
+        public DateTime AdditionDate { get; set; }
         public DateTime StartDate { get; set; }
-        public DateTime EndDate{ get; set; }
+        public DateTime EndDate { get; set; }
         public double UserPriority { get; set; }
         public double EstimatedTime { get; set; }
         public double Sessions { get; set; }
@@ -29,7 +30,7 @@ namespace App2
         public TaskObject()
         {
             TaskName = "Unknown";
-            
+
         }
 
         public void CalculateTruePriority(double ExtraParam)
@@ -78,7 +79,7 @@ namespace App2
 
         public TaskObject CopyData()
         {
-            TaskObject var = (TaskObject) this.MemberwiseClone();
+            TaskObject var = (TaskObject)this.MemberwiseClone();
 
             var.TaskName = TaskName;
             var.Description = Description;
@@ -123,5 +124,5 @@ namespace App2
          */
     }
 
-    
+
 }

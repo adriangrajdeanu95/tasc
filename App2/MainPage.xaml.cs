@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -35,8 +36,7 @@ namespace App2
             this.NavigationCacheMode = NavigationCacheMode.Required;
 
             Globals.TaskList = new List<TaskObject>();
-
-            //ItemLists = new ObservableCollection<TaskObject>();
+            Globals.CurrentTask = new TaskObject();
         }
 
                                                                             /// <summary>
@@ -75,10 +75,16 @@ namespace App2
             this.Frame.Navigate(typeof(AddNewTask));
         }
 
+        public void ChangeCurrentTask(TaskObject parameter)
+        {
+            Globals.CurrentTask = parameter;
+        }
+
         private void ListView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            Globals.CurrentTask = new TaskObject();
-            Globals.CurrentTask = (TaskObject)this.TodayList.SelectedItem;
+            TaskObject current = new TaskObject();
+            current = (TaskObject)e.ClickedItem;
+            ChangeCurrentTask(current);
             Frame.Navigate(typeof(TaskPage));
         }
 

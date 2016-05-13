@@ -51,15 +51,15 @@ namespace App2
             double.TryParse(TextBoxMinutes.Text, out aux2);
             VAR.EstimatedTime = aux1 + aux2 / 60;
             VAR.AdditionDate = DateTime.Now;
-            VAR.Deadline = new DateTime(2016, 6, 1, 0, 0, 0);
-
+            VAR.Deadline = new DateTime();
+            VAR.Deadline = DeadlinePicker.Date.LocalDateTime;
             //TO CALCULATE THE EXTRA PARAM - HELDUP HOURS
 
             VAR.CalculateTruePriority(0);
 
             Globals.TaskList.Add(VAR);
 
-            //  CalculatorClass.ScheduleCalculate();
+            CalculatorClass.ScheduleCalculate();
         }
 
 
