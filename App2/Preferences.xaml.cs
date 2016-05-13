@@ -37,6 +37,24 @@ namespace App2
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             HardwareButtons.BackPressed += HardwareButtons_BackPressed;
+
+            TextBoxWake.Text = Globals.WakeUpTime.ToString("HH");
+            TextBoxSleep.Text = Globals.BedTime.ToString("HH");
+
+            TextBoxMondayS.Text = Globals.MondayStartTime.ToString("HH");
+            TextBoxMondayE.Text = Globals.MondayEndTime.ToString("HH");
+            TextBoxTuesdayS.Text = Globals.TuesdayStartTime.ToString("HH");
+            TextBoxTuesdayE.Text = Globals.TuesdayEndTime.ToString("HH");
+            TextBoxWednesdayS.Text = Globals.WednesdayStartTime.ToString("HH");
+            TextBoxWednesdayE.Text = Globals.WednesdayEndTime.ToString("HH");
+            TextBoxThursdayS.Text = Globals.ThursdayStartTime.ToString("HH");
+            TextBoxThursdayE.Text = Globals.ThursdayEndTime.ToString("HH");
+            TextBoxFridayS.Text = Globals.FridayStartTime.ToString("HH");
+            TextBoxFridayE.Text = Globals.FridayEndTime.ToString("HH");
+            TextBoxSaturdayS.Text = Globals.SaturdayStartTime.ToString("HH");
+            TextBoxSaturdayE.Text = Globals.SaturdayEndTime.ToString("HH");
+            TextBoxSundayS.Text = Globals.SundayStartTime.ToString("HH");
+            TextBoxSundayE.Text = Globals.SundayEndTime.ToString("HH");
         }
 
         private void HardwareButtons_BackPressed(object sender, BackPressedEventArgs e)
@@ -50,7 +68,49 @@ namespace App2
 
         private void SavePreferences_Click(object sender, RoutedEventArgs e)
         {
+            int value;
             //save preferences
+            value = int.Parse(TextBoxWake.Text);
+            Globals.WakeUpTime = new DateTime(1, 1, 1, value, 0, 0);
+            value = int.Parse(TextBoxSleep.Text);
+            Globals.BedTime = new DateTime(1, 1, 1, value, 0, 0);
+
+            value = int.Parse(TextBoxMondayS.Text);
+            Globals.MondayStartTime = new DateTime(1, 1, 1, value, 0, 0);
+            value = int.Parse(TextBoxMondayE.Text);
+            Globals.MondayEndTime = new DateTime(1, 1, 1, value, 0, 0);
+
+            value = int.Parse(TextBoxTuesdayS.Text);
+            Globals.TuesdayStartTime = new DateTime(1, 1, 1, value, 0, 0);
+            value = int.Parse(TextBoxTuesdayE.Text);
+            Globals.TuesdayEndTime = new DateTime(1, 1, 1, value, 0, 0);
+
+            value = int.Parse(TextBoxWednesdayS.Text);
+            Globals.WednesdayStartTime = new DateTime(1, 1, 1, value, 0, 0);
+            value = int.Parse(TextBoxWednesdayE.Text);
+            Globals.WednesdayEndTime = new DateTime(1, 1, 1, value, 0, 0);
+
+            value = int.Parse(TextBoxThursdayS.Text);
+            Globals.ThursdayStartTime = new DateTime(1, 1, 1, value, 0, 0);
+            value = int.Parse(TextBoxThursdayE.Text);
+            Globals.ThursdayEndTime = new DateTime(1, 1, 1, value, 0, 0);
+
+            value = int.Parse(TextBoxFridayS.Text);
+            Globals.FridayStartTime = new DateTime(1, 1, 1, value, 0, 0);
+            value = int.Parse(TextBoxFridayE.Text);
+            Globals.FridayEndTime = new DateTime(1, 1, 1, value, 0, 0);
+
+            value = int.Parse(TextBoxSaturdayS.Text);
+            Globals.SaturdayStartTime = new DateTime(1, 1, 1, value, 0, 0);
+            value = int.Parse(TextBoxSaturdayE.Text);
+            Globals.SaturdayEndTime = new DateTime(1, 1, 1, value, 0, 0);
+
+            value = int.Parse(TextBoxSundayS.Text);
+            Globals.SundayStartTime = new DateTime(1, 1, 1, value, 0, 0);
+            value = int.Parse(TextBoxSundayE.Text);
+            Globals.SundayEndTime = new DateTime(1, 1, 1, value, 0, 0);
+
+            this.Frame.Navigate(typeof(MainPage));
         }
 
         private void cancelprefs_Click(object sender, RoutedEventArgs e)
@@ -61,14 +121,14 @@ namespace App2
         private async void PrefInfoRoutine_Tapped(object sender, TappedRoutedEventArgs e)
         {
 
-            MessageDialog msgbox = new MessageDialog("Here you can set the usual hours you wake up or go to sleep everyday.");
+            MessageDialog msgbox = new MessageDialog("Here you can set the usual hours you wake up or go to sleep everyday.\nMin:1 Max:23");
             msgbox.Commands.Add(new UICommand("Ok"));
             await msgbox.ShowAsync();
         }
 
         private async void PrefInfoSchedule_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            MessageDialog msgbox = new MessageDialog("Here you can set the hours at which you begin and end your work, for each day of the week.");
+            MessageDialog msgbox = new MessageDialog("Here you can set the hours at which you begin and end your work, for each day of the week.\nMin:1 Max:23");
             msgbox.Commands.Add(new UICommand("Ok"));
             await msgbox.ShowAsync();
         }

@@ -19,16 +19,16 @@ namespace App2
     {
         static TruePriorityComparer TPC = new TruePriorityComparer();
 
-      /*  public static void ScheduleCalculate()
+      public static void ScheduleCalculate()
         {
-            Array.Sort(Globals.TaskList, TPC);
+            Globals.TaskList = (List<TaskObject>)Globals.TaskList.OrderByDescending(f => f.TruePriority);
             DateTime StartMoment = DateTime.Now;
             DateTime WeekDayStart = DateTime.Now, WeekDayEnd = DateTime.Now;
-            int i;
             bool checker;
 
-            for (i=0; i<Globals.TaskList.Length; i++)
+            foreach(TaskObject element in Globals.TaskList)
             {
+                backpoint:;
                 switch (StartMoment.DayOfWeek)
                 {
                     case DayOfWeek.Monday:
@@ -63,29 +63,29 @@ namespace App2
 
                 checker = true;   
 
-                checker = StartMoment.AddHours(Globals.TaskList[i].EstimatedTime).TimeOfDay > WeekDayStart.TimeOfDay;
+                checker = StartMoment.AddHours(element.EstimatedTime).TimeOfDay > WeekDayStart.TimeOfDay;
 
                 if (checker)
                 {
                     StartMoment.AddHours(-StartMoment.Hour + WeekDayEnd.Hour);
                 }
 
-                checker = StartMoment.AddHours(Globals.TaskList[i].EstimatedTime).TimeOfDay < Globals.BedTime.TimeOfDay;
+                checker = StartMoment.AddHours(element.EstimatedTime).TimeOfDay < Globals.BedTime.TimeOfDay;
 
                 if (checker)
                 {
-                    Globals.TaskList[i].StartDate = StartMoment;
-                    Globals.TaskList[i].EndDate = Globals.TaskList[i].StartDate.AddHours(Globals.TaskList[i].EstimatedTime);
+                    element.StartDate = StartMoment;
+                    element.EndDate = element.StartDate.AddHours(element.EstimatedTime);
 
-                    StartMoment = Globals.TaskList[i].EndDate.AddHours(1);
+                    StartMoment = element.EndDate.AddHours(1);
                 }
                 else
                 {
                     StartMoment.AddHours(Globals.WakeUpTime.Hour-StartMoment.Hour);
                     StartMoment.AddMinutes(-StartMoment.Minute);
-                    i--;
+                    goto backpoint;
                 }
             }
-        } */
+        }
     }
 }
