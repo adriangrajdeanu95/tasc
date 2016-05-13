@@ -37,6 +37,23 @@ namespace App2
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             HardwareButtons.BackPressed += HardwareButtons_BackPressed;
+
+            TextBoxWake.Text = Globals.WakeUpTime.ToString("HH");
+            TextBoxSleep.Text = Globals.BedTime.ToString("HH");
+            TextBoxMondayS.Text = Globals.MondayStartTime.ToString("HH");
+            TextBoxMondayE.Text = Globals.MondayEndTime.ToString("HH");
+            TextBoxTuesdayS.Text = Globals.TuesdayStartTime.ToString("HH");
+            TextBoxTuesdayE.Text = Globals.TuesdayEndTime.ToString("HH");
+            TextBoxWednesdayS.Text = Globals.WednesdayStartTime.ToString("HH");
+            TextBoxWednesdayE.Text = Globals.WednesdayEndTime.ToString("HH");
+            TextBoxThursdayS.Text = Globals.ThursdayStartTime.ToString("HH");
+            TextBoxThursdayE.Text = Globals.ThursdayEndTime.ToString("HH");
+            TextBoxFridayS.Text = Globals.FridayStartTime.ToString("HH");
+            TextBoxFridayE.Text = Globals.FridayEndTime.ToString("HH");
+            TextBoxSaturdayS.Text = Globals.SaturdayStartTime.ToString("HH");
+            TextBoxSaturdayE.Text = Globals.SaturdayEndTime.ToString("HH");
+            TextBoxSundayS.Text = Globals.SundayStartTime.ToString("HH");
+            TextBoxSundayE.Text = Globals.SundayEndTime.ToString("HH");
         }
 
         private void HardwareButtons_BackPressed(object sender, BackPressedEventArgs e)
