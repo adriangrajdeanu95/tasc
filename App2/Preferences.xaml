@@ -14,7 +14,7 @@
             <StackPanel Margin="20,10,10,10">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock FontSize="20">Waking hours</TextBlock>
-                    <TextBlock x:Name="PrefInfoRoutine" FontSize="20" Margin="240,0,0,0" Tapped="PrefInfoRoutine_Tapped">?
+                    <TextBlock x:Name="PrefInfoRoutine" FontSize="20" Margin="100,0,0,0" Tapped="PrefInfoRoutine_Tapped">?
                     <ToolTipService.ToolTip> 
                         <ToolTip Content="Explanations about waking hours part." HorizontalOffset="20" VerticalOffset="30"/>
                      </ToolTipService.ToolTip>
@@ -26,7 +26,7 @@
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
                     <TextBlock FontSize="25">Daily schedule</TextBlock>
-                    <TextBlock x:Name="PrefInfoSchedule" FontSize="25" Margin="200,0,0,0" Tapped="PrefInfoSchedule_Tapped">?</TextBlock>
+                    <TextBlock x:Name="PrefInfoSchedule" FontSize="25" Margin="100,0,0,0" Tapped="PrefInfoSchedule_Tapped">?</TextBlock>
                 </StackPanel>
                 <TextBlock FontSize="20">Monday</TextBlock>
                 <StackPanel Orientation="Horizontal">

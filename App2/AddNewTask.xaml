@@ -13,10 +13,10 @@
             <TextBlock x:Name="TaskTitle" HorizontalAlignment="Left" Margin="40,10,0,0" Style="{StaticResource TitleTextBlockStyle}" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" Text="Add New Task" FontFamily="Segoe WP Light" FontWeight="Normal"/>
             <StackPanel Margin="20,10,10,10">
             <TextBlock FontSize="20">Title</TextBlock>
-            <TextBox x:Name="TextBoxTitle"></TextBox>
+                <TextBox x:Name="TextBoxTitle" Text="Title here"></TextBox>
             <TextBlock FontSize="20">Description</TextBlock>
                 <ScrollViewer>
-                    <TextBox x:Name="TextBoxDescription" Height="100"></TextBox>
+                    <TextBox x:Name="TextBoxDescription" Height="100" Text="Description here"></TextBox>
                 </ScrollViewer>
             <TextBlock FontSize="20">Priority</TextBlock>
             <StackPanel Orientation="Horizontal">
@@ -27,9 +27,9 @@
                 <DatePicker x:Name="Deadline" HorizontalAlignment="Left" Width="135"></DatePicker>             
              <TextBlock FontSize="20">Estimated time to finish and sessions nr.</TextBlock>
                 <StackPanel Orientation="Horizontal">
-                    <TextBox x:Name="TextBoxHours" Margin="20,0,10,0" Width="75"></TextBox>
-                    <TextBox x:Name="TextBoxMinutes" Margin="0,0,0,0" Width="75"/>
-                    <TextBox x:Name="TextBoxSessions" Margin="80,0,0,0" Width="75"></TextBox>
+                    <TextBox x:Name="TextBoxHours" Margin="20,0,10,0" Width="75" InputScope="Number" Text="0"></TextBox>
+                    <TextBox x:Name="TextBoxMinutes" Margin="0,0,0,0" Width="75" InputScope="Number" Text="0"/>
+                    <TextBox x:Name="TextBoxSessions" Margin="80,0,0,0" Width="75" InputScope="Number" Text="1"></TextBox>
                 </StackPanel>
             </StackPanel>
         </StackPanel>
