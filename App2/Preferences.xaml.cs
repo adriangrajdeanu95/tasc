@@ -6,6 +6,7 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Phone.UI.Input;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -57,14 +58,19 @@ namespace App2
             this.Frame.Navigate(typeof(MainPage));
         }
 
-        private void PrefInfoRoutine_Tapped(object sender, TappedRoutedEventArgs e)
+        private async void PrefInfoRoutine_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            
+
+            MessageDialog msgbox = new MessageDialog("Here you can set the usual hours you wake up or go to sleep everyday.");
+            msgbox.Commands.Add(new UICommand("Ok"));
+            await msgbox.ShowAsync();
         }
 
-        private void PrefInfoSchedule_Tapped(object sender, TappedRoutedEventArgs e)
+        private async void PrefInfoSchedule_Tapped(object sender, TappedRoutedEventArgs e)
         {
-
+            MessageDialog msgbox = new MessageDialog("Here you can set the hours at which you begin and end your work, for each day of the week.");
+            msgbox.Commands.Add(new UICommand("Ok"));
+            await msgbox.ShowAsync();
         }
     }
 }
