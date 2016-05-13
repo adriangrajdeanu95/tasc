@@ -46,5 +46,25 @@ namespace App2
                 Frame.GoBack();
             }
         }
+
+        private void SavePreferences_Click(object sender, RoutedEventArgs e)
+        {
+            //save preferences
+        }
+
+        private void cancelprefs_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
+
+        private void PrefInfoRoutine_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            
+        }
+
+        private void PrefInfoSchedule_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+
+        }
     }
 }

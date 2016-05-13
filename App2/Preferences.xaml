@@ -6,9 +6,71 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="#FF123B57">
 
     <Grid>
-
+        <StackPanel>
+            <TextBlock x:Name="TaskTitle" HorizontalAlignment="Left" Margin="40,10,0,0" Style="{StaticResource TitleTextBlockStyle}" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" Text="Preferences" FontFamily="Segoe WP Light" FontWeight="Normal"/>
+            <StackPanel Margin="20,10,10,10">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontSize="20">Waking hours</TextBlock>
+                    <TextBlock x:Name="PrefInfoRoutine" FontSize="20" Margin="240,0,0,0" Tapped="PrefInfoRoutine_Tapped">?
+                    <ToolTipService.ToolTip> 
+                        <ToolTip Content="Explanations about waking hours part." HorizontalOffset="20" VerticalOffset="30"/>
+                     </ToolTipService.ToolTip>
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <TextBox x:Name="TextBoxWake" Margin="20,0,10,0" Width="60" Height="20"></TextBox>
+                    <TextBox x:Name="TextBoxSleep" Margin="0,0,0,0" Width="60" Height="20"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontSize="25">Daily schedule</TextBlock>
+                    <TextBlock x:Name="PrefInfoSchedule" FontSize="25" Margin="200,0,0,0" Tapped="PrefInfoSchedule_Tapped">?</TextBlock>
+                </StackPanel>
+                <TextBlock FontSize="20">Monday</TextBlock>
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="TextBoxMondayS" Margin="20,0,10,0" Width="60" Height="20"></TextBox>
+                    <TextBox x:Name="TextBoxMondayE" Margin="0,0,0,0" Width="60" Height="20"/>
+                </StackPanel>
+                <TextBlock FontSize="20">Tuesday</TextBlock>
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="TextBoxTuesdayS" Margin="20,0,10,0" Width="60" Height="20"></TextBox>
+                    <TextBox x:Name="TextBoxTuesdayE" Margin="0,0,0,0" Width="60" Height="20"/>
+                </StackPanel>
+                <TextBlock FontSize="20">Wednesday</TextBlock>
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="TextBoxWednesdayS" Margin="20,0,10,0" Width="60" Height="20"></TextBox>
+                    <TextBox x:Name="TextBoxWednesdayE" Margin="0,0,0,0" Width="60" Height="20"/>
+                </StackPanel>
+                <TextBlock FontSize="20">Thursday</TextBlock>
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="TextBoxThursdayS" Margin="20,0,10,0" Width="60" Height="20"></TextBox>
+                    <TextBox x:Name="TextBoxThursdayE" Margin="0,0,0,0" Width="60" Height="20"/>
+                </StackPanel>
+                <TextBlock FontSize="20">Friday</TextBlock>
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="TextBoxFridayS" Margin="20,0,10,0" Width="60" Height="20"></TextBox>
+                    <TextBox x:Name="TextBoxFridayE" Margin="0,0,0,0" Width="60" Height="20"/>
+                </StackPanel>
+                <TextBlock FontSize="20">Saturday</TextBlock>
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="TextBoxSaturdayS" Margin="20,0,10,0" Width="60" Height="20"></TextBox>
+                    <TextBox x:Name="TextBoxSaturdayE" Margin="0,0,0,0" Width="60" Height="20"/>
+                </StackPanel>
+                <TextBlock FontSize="20">Sunday</TextBlock>
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="TextBoxSundayS" Margin="20,0,10,0" Width="60" Height="20"></TextBox>
+                    <TextBox x:Name="TextBoxSundayE" Margin="0,0,0,0" Width="60" Height="20"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
     </Grid>
+
+    <Page.BottomAppBar>
+        <CommandBar Background="#FF071F2C">
+            <AppBarButton x:Uid="SavePreferences" x:Name="SavePreferences" Label="Save Prefs" Icon="Save" Click="SavePreferences_Click" />
+            <AppBarButton x:Uid="CancelPrefs" x:Name="cancelprefs" Label="Cancel" Icon="Cancel" Click="cancelprefs_Click" />
+        </CommandBar>
+    </Page.BottomAppBar>
 </Page>
