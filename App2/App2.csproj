@@ -96,6 +96,9 @@
     <Compile Include="FilterPage.xaml.cs">
       <DependentUpon>FilterPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TaskEditPage.xaml.cs">
+      <DependentUpon>TaskEditPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TaskObject.cs" />
     <Compile Include="TaskPage.xaml.cs">
       <DependentUpon>TaskPage.xaml</DependentUpon>
@@ -141,6 +144,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="FilterPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TaskEditPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

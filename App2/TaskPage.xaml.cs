@@ -50,17 +50,29 @@ namespace App2
 
         private void EditAppBarButton_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Frame.Navigate(typeof(TaskEditPage));
         }
 
         private void DeleteAppBarButton_Click(object sender, RoutedEventArgs e)
         {
+            Globals.TaskList.Remove(Globals.CurrentTask);
 
+            if (Frame.CanGoBack)
+            {
+                //e.Handled = true;
+                Frame.GoBack();
+            }
         }
 
         private void DoneAppBarButton_Click(object sender, RoutedEventArgs e)
         {
+            Globals.TaskList.Remove(Globals.CurrentTask);
 
+            if (Frame.CanGoBack)
+            {
+                //e.Handled = true;
+                Frame.GoBack();
+            }
         }
 
         private void HardwareButtons_BackPressed(object sender, BackPressedEventArgs e)
