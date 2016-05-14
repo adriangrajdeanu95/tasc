@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -20,14 +21,15 @@ using Windows.UI.Xaml.Navigation;
 
 namespace App2
 {
-                                                                            /// <summary>
-                                                                            /// An empty page that can be used on its own or navigated to within a Frame.
-                                                                            /// </summary>
+    /// <summary>
+    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// </summary>
     public sealed partial class MainPage : Page
     {
 
-        public ObservableCollection<TaskObject> ItemLists { get; set; }
-        
+        public ObservableCollection<TaskObject> ItemListsDay { get; set; }
+        public ObservableCollection<TaskObject> ItemListsWeek { get; set; }
+        public ObservableCollection<TaskObject> ItemListsAll { get; set; }
 
         public MainPage()
         {
@@ -37,13 +39,29 @@ namespace App2
 
             Globals.TaskList = new List<TaskObject>();
             Globals.CurrentTask = new TaskObject();
+            Globals.WakeUpTime = new DateTime(1, 1, 1, 8, 0, 0);
+            Globals.BedTime = new DateTime(1, 1, 1, 22, 0, 0);
+            Globals.MondayStartTime = new DateTime(1, 1, 1, 9, 0, 0);
+            Globals.MondayEndTime = new DateTime(1, 1, 1, 17, 0, 0);
+            Globals.TuesdayStartTime = new DateTime(1, 1, 1, 9, 0, 0);
+            Globals.TuesdayEndTime = new DateTime(1, 1, 1, 17, 0, 0);
+            Globals.WednesdayStartTime = new DateTime(1, 1, 1, 9, 0, 0);
+            Globals.WednesdayEndTime = new DateTime(1, 1, 1, 17, 0, 0);
+            Globals.ThursdayStartTime = new DateTime(1, 1, 1, 9, 0, 0);
+            Globals.ThursdayEndTime = new DateTime(1, 1, 1, 17, 0, 0);
+            Globals.FridayStartTime = new DateTime(1, 1, 1, 9, 0, 0);
+            Globals.FridayEndTime = new DateTime(1, 1, 1, 17, 0, 0);
+            Globals.SaturdayStartTime = new DateTime(1, 1, 1, 9, 0, 0);
+            Globals.SaturdayEndTime = new DateTime(1, 1, 1, 17, 0, 0);
+            Globals.SundayStartTime = new DateTime(1, 1, 1, 9, 0, 0);
+            Globals.SundayEndTime = new DateTime(1, 1, 1, 17, 0, 0);
         }
 
-                                                                            /// <summary>
-                                                                            /// Invoked when this page is about to be displayed in a Frame.
-                                                                            /// </summary>
-                                                                            /// <param name="e">Event data that describes how this page was reached.
-                                                                            /// This parameter is typically used to configure the page.</param>
+        /// <summary>
+        /// Invoked when this page is about to be displayed in a Frame.
+        /// </summary>
+        /// <param name="e">Event data that describes how this page was reached.
+        /// This parameter is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             // TODO: Prepare page for display here.
@@ -54,14 +72,28 @@ namespace App2
             // If you are using the NavigationHelper provided by some templates,
             // this event is handled for you.
 
-            ItemLists = new ObservableCollection<TaskObject>();
+            ItemListsDay = new ObservableCollection<TaskObject>();
+            ItemListsWeek = new ObservableCollection<TaskObject>();
+            ItemListsAll = new ObservableCollection<TaskObject>();
             foreach (TaskObject element in Globals.TaskList)
-                ItemLists.Add(element);
+            {
+                if (element.StartDate.DayOfWeek == DateTime.Now.DayOfWeek)
+                    ItemListsDay.Add(element);
+            }
 
+            foreach (TaskObject element in Globals.TaskList)
+            {
+                if ((element.StartDate - DateTime.Now).TotalDays < 7)
+                    ItemListsWeek.Add(element);
+            }
+            foreach (TaskObject element in Globals.TaskList)
+            {
+                    ItemListsAll.Add(element);
+            }
 
-            TodayList.ItemsSource = ItemLists;
-            WeekList.ItemsSource = ItemLists;
-            ALLList.ItemsSource = ItemLists;
+            TodayList.ItemsSource = ItemListsDay;
+            WeekList.ItemsSource = ItemListsWeek;
+            ALLList.ItemsSource = ItemListsAll;
         }
 
         private void FilterAppBarButton_Click(object sender, RoutedEventArgs e)

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Popups;
 
 namespace App2
 {
@@ -25,13 +26,15 @@ namespace App2
     {
 
         public static PriorityComparer TPC = new PriorityComparer();
-        
+
         public static void ScheduleCalculate()
         {
             Globals.TaskList.Sort(TPC);
-            DateTime StartMoment = DateTime.Now;
+            DateTime StartMoment = new DateTime();
+            StartMoment = DateTime.Now;
             DateTime WeekDayStart = DateTime.Now, WeekDayEnd = DateTime.Now;
             bool checker;
+            int y, m, d, h, n, s;
 
             foreach(TaskObject element in Globals.TaskList)
             {
@@ -68,13 +71,34 @@ namespace App2
                         break;
                 }
 
-                checker = true;   
+                checker = true;
 
-                checker = StartMoment.AddHours(element.EstimatedTime).TimeOfDay > WeekDayStart.TimeOfDay;
+                checker = StartMoment.TimeOfDay < Globals.WakeUpTime.TimeOfDay;
 
                 if (checker)
                 {
-                    StartMoment.AddHours(-StartMoment.Hour + WeekDayEnd.Hour);
+                    //StartMoment.AddHours(Globals.WakeUpTime.Hour - StartMoment.Hour);
+                    y = StartMoment.Year;
+                    m = StartMoment.Month;
+                    d = StartMoment.Day;
+                    h = Globals.WakeUpTime.Hour;
+                    n = 0;
+                    s = 0;
+                    StartMoment = new DateTime(y,m,d,h,n,s);
+                }
+
+                checker = StartMoment.AddHours(element.EstimatedTime).TimeOfDay > WeekDayStart.TimeOfDay && StartMoment.TimeOfDay < WeekDayEnd.TimeOfDay;
+
+                if (checker)
+                {
+                    //StartMoment.AddHours(-StartMoment.Hour + WeekDayEnd.Hour);
+                    y = StartMoment.Year;
+                    m = StartMoment.Month;
+                    d = StartMoment.Day;
+                    h = WeekDayEnd.Hour;
+                    n = 0;
+                    s = 0;
+                    StartMoment = new DateTime(y, m, d, h, n, s);
                 }
 
                 checker = StartMoment.AddHours(element.EstimatedTime).TimeOfDay < Globals.BedTime.TimeOfDay;
@@ -84,12 +108,26 @@ namespace App2
                     element.StartDate = StartMoment;
                     element.EndDate = element.StartDate.AddHours(element.EstimatedTime);
 
-                    StartMoment = element.EndDate.AddHours(1);
+                    y = element.EndDate.Year;
+                    m = element.EndDate.Month;
+                    d = element.EndDate.Day;
+                    h = element.EndDate.Hour+1;
+                    n = element.EndDate.Minute;
+                    s = element.EndDate.Second;
+
+                    StartMoment = new DateTime(y, m, d, h, n, s);
                 }
                 else
                 {
-                    StartMoment.AddHours(Globals.WakeUpTime.Hour-StartMoment.Hour);
-                    StartMoment.AddMinutes(-StartMoment.Minute);
+                    //StartMoment.AddHours(Globals.WakeUpTime.Hour-StartMoment.Hour);
+                    //StartMoment.AddMinutes(-StartMoment.Minute);
+                    y = StartMoment.Year;
+                    m = StartMoment.Month;
+                    d = StartMoment.Day+1;
+                    h = Globals.WakeUpTime.Hour;
+                    n = 0;
+                    s = 0;
+                    StartMoment = new DateTime(y, m, d, h, n, s);
                     goto backpoint;
                 }
             }

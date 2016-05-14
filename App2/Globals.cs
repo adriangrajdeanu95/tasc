@@ -11,23 +11,23 @@ namespace App2
         public static List<TaskObject> TaskList;
         public static TaskObject CurrentTask { get; set; }
 
-        public static DateTime WakeUpTime = new DateTime(1, 1, 1, 8, 0, 0);
-        public static DateTime BedTime = new DateTime(1, 1, 1, 22, 0, 0);
-        public static DateTime MondayStartTime = new DateTime(1, 1, 1, 9, 0, 0);
-        public static DateTime MondayEndTime = new DateTime(1, 1, 1, 17, 0, 0);
-        public static DateTime TuesdayStartTime = new DateTime(1, 1, 1, 9, 0, 0);
-        public static DateTime TuesdayEndTime = new DateTime(1, 1, 1, 17, 0, 0);
-        public static DateTime WednesdayStartTime = new DateTime(1, 1, 1, 9, 0, 0);
-        public static DateTime WednesdayEndTime = new DateTime(1, 1, 1, 17, 0, 0);
-        public static DateTime ThursdayStartTime = new DateTime(1, 1, 1, 9, 0, 0);
-        public static DateTime ThursdayEndTime = new DateTime(1, 1, 1, 17, 0, 0);
-        public static DateTime FridayStartTime = new DateTime(1, 1, 1, 9, 0, 0);
-        public static DateTime FridayEndTime = new DateTime(1, 1, 1, 17, 0, 0);
-        public static DateTime SaturdayStartTime = new DateTime(1, 1, 1, 9, 0, 0);
-        public static DateTime SaturdayEndTime = new DateTime(1, 1, 1, 17, 0, 0);
-        public static DateTime SundayStartTime = new DateTime(1, 1, 1, 9, 0, 0);
-        public static DateTime SundayEndTime = new DateTime(1, 1, 1, 17, 0, 0);
-    }
+        public static DateTime WakeUpTime { get; set; }
+        public static DateTime BedTime { get; set; }
+        public static DateTime MondayStartTime { get; set; }
+        public static DateTime MondayEndTime { get; set; }
+        public static DateTime TuesdayStartTime { get; set; }
+        public static DateTime TuesdayEndTime { get; set; }
+        public static DateTime WednesdayStartTime { get; set; }
+        public static DateTime WednesdayEndTime { get; set; }
+        public static DateTime ThursdayStartTime { get; set; }
+        public static DateTime ThursdayEndTime { get; set; }
+        public static DateTime FridayStartTime { get; set; }
+        public static DateTime FridayEndTime { get; set; }
+        public static DateTime SaturdayStartTime { get; set; }
+        public static DateTime SaturdayEndTime { get; set; }
+        public static DateTime SundayStartTime { get; set; }
+        public static DateTime SundayEndTime { get; set; }
+}
 }
 
 
