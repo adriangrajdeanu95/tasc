@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -23,12 +24,13 @@ namespace App2
     /// </summary>
     public sealed partial class TaskPage : Page
     {
+
+        public ObservableCollection<TaskObject> ItemLists { get; set; }
+
         public TaskPage()
         {
             this.InitializeComponent();
 
-
-           
         }
 
         /// <summary>
@@ -39,6 +41,11 @@ namespace App2
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             HardwareButtons.BackPressed += HardwareButtons_BackPressed;
+
+            ItemLists = new ObservableCollection<TaskObject>();
+            ItemLists.Add(Globals.CurrentTask);
+
+            TaskView.ItemsSource = ItemLists;
         }
 
         private void EditAppBarButton_Click(object sender, RoutedEventArgs e)

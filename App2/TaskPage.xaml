@@ -9,15 +9,28 @@
     Background="#FF123B57">
 
 
-    <Grid >
-        <StackPanel>
-            <TextBlock x:Name="TaskTitle" HorizontalAlignment="Left" Margin="40,10,0,0" Style="{StaticResource TitleTextBlockStyle}" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" Text="{Binding Globals.CurrentTask.TaskName}" FontFamily="Segoe WP Light" FontWeight="Normal"/>
-            <TextBlock x:Name="TaskDescription" Margin="20,35,20,0" TextWrapping="Wrap" Text="Task Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam consequat et diam quis pharetra. Praesent eget lectus et lacus finibus." VerticalAlignment="Top" FontSize="18" TextAlignment="Justify" d:LayoutOverrides="Width, LeftPosition, RightPosition"/>
-            <TextBlock x:Name="TaskPriority" Margin="20,20,20,0" TextWrapping="Wrap" Text="Priority: random_number" FontSize="22"/>
-            <TextBlock x:Name="TaskDeadline" Margin="20,0,20,0" TextWrapping="Wrap" Text="Deadline: random_Date/time" FontSize="22"/>
-            <TextBlock x:Name="TaskBeginDateTime" Margin="20,10,20,0" TextWrapping="Wrap" Text="Begin: MM/DD/YYYY HH:MM" FontSize="22"/>
-            <TextBlock x:Name="TaskEndDateTime" Margin="20,0,20,0" TextWrapping="Wrap" Text="End: MM/DD/YYYY HH:MM" FontSize="22"/>
-        </StackPanel>
+    <Grid>
+        <ScrollViewer>
+            <ListView x:Name="TaskView" 
+                              
+                              ContinuumNavigationTransitionInfo.ExitElementContainer="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock x:Name="TaskTitle" HorizontalAlignment="Left" Margin="40,10,0,0" Style="{StaticResource TitleTextBlockStyle}" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" Text="{Binding TaskName}" FontFamily="Segoe WP Light" FontWeight="Normal"/>
+                            <TextBlock x:Name="TaskDescription" Margin="20,35,20,0" TextWrapping="Wrap" Text="{Binding Description}" VerticalAlignment="Top" FontSize="18" TextAlignment="Justify" d:LayoutOverrides="Width, LeftPosition, RightPosition"/>
+                            <TextBlock x:Name="TaskPriorityText" Margin="20,25,20,0" TextWrapping="Wrap" Text="Priority:" FontSize="22"/>
+                            <TextBlock x:Name="TaskPriority" Margin="30,0,20,0" TextWrapping="Wrap" Text="{Binding UserPriority}" FontSize="22"/>
+                            <TextBlock x:Name="TaskDeadlineText" Margin="20,0,20,0" TextWrapping="Wrap" Text="Deadline:" FontSize="22"/>
+                            <TextBlock x:Name="TaskDeadline" Margin="30,0,20,0" TextWrapping="Wrap" Text="{Binding Deadline}" FontSize="22"/>
+                            <TextBlock x:Name="TaskWorkDateText" Margin="20,0,20,0" TextWrapping="Wrap" Text="To be done between:" FontSize="22"/>
+                            <TextBlock x:Name="TaskBeginDateTime" Margin="35,10,20,0" TextWrapping="Wrap" Text="{Binding StartDate}" FontSize="22"/>
+                            <TextBlock x:Name="TaskEndDateTime" Margin="35,0,20,0" TextWrapping="Wrap" Text="{Binding EndDate}" FontSize="22"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollViewer>
     </Grid>
     <Page.BottomAppBar>
         <CommandBar Background="#FF071F2C">
