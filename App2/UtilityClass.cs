@@ -54,6 +54,10 @@ namespace App2
             for (int i=0; i<TemporaryDataSplit.Length; i+=12)
             {
                 Globals.TaskList[i / 12] = new TaskObject();
+                Globals.TaskList[i / 12].Deadline = new DateTime();
+                Globals.TaskList[i / 12].AdditionDate = new DateTime();
+                Globals.TaskList[i / 12].StartDate = new DateTime();
+                Globals.TaskList[i / 12].EndDate = new DateTime();
 
                 Globals.TaskList[i / 12].TaskName = TemporaryDataSplit[i];
                 Globals.TaskList[i / 12].Description = TemporaryDataSplit[i + 1];

@@ -58,6 +58,7 @@ namespace App2
             VAR.CalculateTruePriority(0);
 
             Globals.TaskList.Add(VAR);
+            UtilityClass.DataToText();
 
             //  CalculatorClass.ScheduleCalculate();
         }
